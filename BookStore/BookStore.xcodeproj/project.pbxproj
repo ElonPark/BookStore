@@ -31,6 +31,9 @@
 		DBE5BCD02743FE6800724336 /* NetworkRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE5BCCF2743FE6800724336 /* NetworkRepository.swift */; };
 		DBE5BCD22743FEB400724336 /* BookSearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE5BCD12743FEB400724336 /* BookSearchRepository.swift */; };
 		DBE5BCD42743FEDD00724336 /* BookDetailsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE5BCD32743FEDD00724336 /* BookDetailsRepository.swift */; };
+		DBE5BCDA2743FF7F00724336 /* BookDetailsRepositoryStubTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE5BCD92743FF7F00724336 /* BookDetailsRepositoryStubTestCase.swift */; };
+		DBE5BCDC2743FFDD00724336 /* BookDetailsTestDataFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE5BCDB2743FFDD00724336 /* BookDetailsTestDataFactory.swift */; };
+		DBE5BCDE2744001D00724336 /* BookDetailsRepositoryTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE5BCDD2744001D00724336 /* BookDetailsRepositoryTestCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +83,9 @@
 		DBE5BCCF2743FE6800724336 /* NetworkRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRepository.swift; sourceTree = "<group>"; };
 		DBE5BCD12743FEB400724336 /* BookSearchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchRepository.swift; sourceTree = "<group>"; };
 		DBE5BCD32743FEDD00724336 /* BookDetailsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsRepository.swift; sourceTree = "<group>"; };
+		DBE5BCD92743FF7F00724336 /* BookDetailsRepositoryStubTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsRepositoryStubTestCase.swift; sourceTree = "<group>"; };
+		DBE5BCDB2743FFDD00724336 /* BookDetailsTestDataFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsTestDataFactory.swift; sourceTree = "<group>"; };
+		DBE5BCDD2744001D00724336 /* BookDetailsRepositoryTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsRepositoryTestCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +150,7 @@
 		DBE5BBF62743D0F400724336 /* BookStoreTests */ = {
 			isa = PBXGroup;
 			children = (
+				DBE5BCD82743FF6C00724336 /* BookDetailsRepositoryTests */,
 				DBE5BBF72743D0F400724336 /* BookStoreTests.swift */,
 				DBE5BBF92743D0F400724336 /* Info.plist */,
 			);
@@ -335,6 +342,16 @@
 			path = BookStoreAPI;
 			sourceTree = "<group>";
 		};
+		DBE5BCD82743FF6C00724336 /* BookDetailsRepositoryTests */ = {
+			isa = PBXGroup;
+			children = (
+				DBE5BCDD2744001D00724336 /* BookDetailsRepositoryTestCase.swift */,
+				DBE5BCD92743FF7F00724336 /* BookDetailsRepositoryStubTestCase.swift */,
+				DBE5BCDB2743FFDD00724336 /* BookDetailsTestDataFactory.swift */,
+			);
+			path = BookDetailsRepositoryTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -497,6 +514,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBE5BBF82743D0F400724336 /* BookStoreTests.swift in Sources */,
+				DBE5BCDA2743FF7F00724336 /* BookDetailsRepositoryStubTestCase.swift in Sources */,
+				DBE5BCDC2743FFDD00724336 /* BookDetailsTestDataFactory.swift in Sources */,
+				DBE5BCDE2744001D00724336 /* BookDetailsRepositoryTestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
