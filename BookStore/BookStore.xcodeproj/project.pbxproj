@@ -24,6 +24,13 @@
 		DBE5BCC12743DEBF00724336 /* DetailsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE5BCC02743DEBF00724336 /* DetailsAPI.swift */; };
 		DBE5BCC32743E0DF00724336 /* URLPathPercentEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE5BCC22743E0DF00724336 /* URLPathPercentEncodable.swift */; };
 		DBE5BCC52743E9DE00724336 /* DetailsAPISampleDataFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE5BCC42743E9DE00724336 /* DetailsAPISampleDataFactory.swift */; };
+		DBE5BCC72743FCE000724336 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE5BCC62743FCE000724336 /* NetworkProvider.swift */; };
+		DBE5BCCA2743FD1600724336 /* NetworkLogPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE5BCC92743FD1600724336 /* NetworkLogPlugin.swift */; };
+		DBE5BCCC2743FDEC00724336 /* BookDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE5BCCB2743FDEC00724336 /* BookDetails.swift */; };
+		DBE5BCCE2743FE0B00724336 /* BookSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE5BCCD2743FE0B00724336 /* BookSearchResult.swift */; };
+		DBE5BCD02743FE6800724336 /* NetworkRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE5BCCF2743FE6800724336 /* NetworkRepository.swift */; };
+		DBE5BCD22743FEB400724336 /* BookSearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE5BCD12743FEB400724336 /* BookSearchRepository.swift */; };
+		DBE5BCD42743FEDD00724336 /* BookDetailsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE5BCD32743FEDD00724336 /* BookDetailsRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +73,13 @@
 		DBE5BCC02743DEBF00724336 /* DetailsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsAPI.swift; sourceTree = "<group>"; };
 		DBE5BCC22743E0DF00724336 /* URLPathPercentEncodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLPathPercentEncodable.swift; sourceTree = "<group>"; };
 		DBE5BCC42743E9DE00724336 /* DetailsAPISampleDataFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsAPISampleDataFactory.swift; sourceTree = "<group>"; };
+		DBE5BCC62743FCE000724336 /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
+		DBE5BCC92743FD1600724336 /* NetworkLogPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLogPlugin.swift; sourceTree = "<group>"; };
+		DBE5BCCB2743FDEC00724336 /* BookDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetails.swift; sourceTree = "<group>"; };
+		DBE5BCCD2743FE0B00724336 /* BookSearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchResult.swift; sourceTree = "<group>"; };
+		DBE5BCCF2743FE6800724336 /* NetworkRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRepository.swift; sourceTree = "<group>"; };
+		DBE5BCD12743FEB400724336 /* BookSearchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchRepository.swift; sourceTree = "<group>"; };
+		DBE5BCD32743FEDD00724336 /* BookDetailsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -264,6 +278,8 @@
 		DBE5BCAD2743D75900724336 /* Entites */ = {
 			isa = PBXGroup;
 			children = (
+				DBE5BCCB2743FDEC00724336 /* BookDetails.swift */,
+				DBE5BCCD2743FE0B00724336 /* BookSearchResult.swift */,
 			);
 			path = Entites;
 			sourceTree = "<group>";
@@ -271,6 +287,9 @@
 		DBE5BCAE2743D77200724336 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				DBE5BCCF2743FE6800724336 /* NetworkRepository.swift */,
+				DBE5BCD32743FEDD00724336 /* BookDetailsRepository.swift */,
+				DBE5BCD12743FEB400724336 /* BookSearchRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -280,9 +299,9 @@
 			children = (
 				DBE5BCB12743D85400724336 /* Protocols */,
 				DBE5BCB02743D84900724336 /* Fixtures */,
-				DBE5BCB22743D90000724336 /* BookStoreInformation.swift */,
-				DBE5BCB42743D9D000724336 /* SearchAPI.swift */,
-				DBE5BCC02743DEBF00724336 /* DetailsAPI.swift */,
+				DBE5BCC82743FCEA00724336 /* BookStoreAPI */,
+				DBE5BCC92743FD1600724336 /* NetworkLogPlugin.swift */,
+				DBE5BCC62743FCE000724336 /* NetworkProvider.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -304,6 +323,16 @@
 				DBE5BCC22743E0DF00724336 /* URLPathPercentEncodable.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		DBE5BCC82743FCEA00724336 /* BookStoreAPI */ = {
+			isa = PBXGroup;
+			children = (
+				DBE5BCB22743D90000724336 /* BookStoreInformation.swift */,
+				DBE5BCB42743D9D000724336 /* SearchAPI.swift */,
+				DBE5BCC02743DEBF00724336 /* DetailsAPI.swift */,
+			);
+			path = BookStoreAPI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -447,12 +476,19 @@
 				DBE5BCC52743E9DE00724336 /* DetailsAPISampleDataFactory.swift in Sources */,
 				DBE5BCB52743D9D000724336 /* SearchAPI.swift in Sources */,
 				DBE5BBE12743D0F300724336 /* AppDelegate.swift in Sources */,
+				DBE5BCCA2743FD1600724336 /* NetworkLogPlugin.swift in Sources */,
+				DBE5BCC72743FCE000724336 /* NetworkProvider.swift in Sources */,
+				DBE5BCD42743FEDD00724336 /* BookDetailsRepository.swift in Sources */,
 				DBE5BCB32743D90000724336 /* BookStoreInformation.swift in Sources */,
 				DBE5BCBA2743DCB700724336 /* FixtureFactory.swift in Sources */,
 				DBE5BCBD2743DCF100724336 /* EndpointTastable.swift in Sources */,
 				DBE5BBE32743D0F300724336 /* SceneDelegate.swift in Sources */,
 				DBE5BCC32743E0DF00724336 /* URLPathPercentEncodable.swift in Sources */,
+				DBE5BCD02743FE6800724336 /* NetworkRepository.swift in Sources */,
 				DBE5BCC12743DEBF00724336 /* DetailsAPI.swift in Sources */,
+				DBE5BCCE2743FE0B00724336 /* BookSearchResult.swift in Sources */,
+				DBE5BCCC2743FDEC00724336 /* BookDetails.swift in Sources */,
+				DBE5BCD22743FEB400724336 /* BookSearchRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
