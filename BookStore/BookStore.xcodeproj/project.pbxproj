@@ -33,6 +33,9 @@
 		DBE5BCDA2743FF7F00724336 /* BookDetailsRepositoryStubTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE5BCD92743FF7F00724336 /* BookDetailsRepositoryStubTestCase.swift */; };
 		DBE5BCDC2743FFDD00724336 /* BookDetailsTestDataFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE5BCDB2743FFDD00724336 /* BookDetailsTestDataFactory.swift */; };
 		DBE5BCDE2744001D00724336 /* BookDetailsRepositoryTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE5BCDD2744001D00724336 /* BookDetailsRepositoryTestCase.swift */; };
+		DBE5BCE1274401F600724336 /* BookSearchRepositoryStubTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE5BCE0274401F600724336 /* BookSearchRepositoryStubTestCase.swift */; };
+		DBE5BCE32744021C00724336 /* BookSearchTestDataFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE5BCE22744021C00724336 /* BookSearchTestDataFactory.swift */; };
+		DBE5BCE52744028D00724336 /* BookSearchRepositoryTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE5BCE42744028D00724336 /* BookSearchRepositoryTestCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +87,9 @@
 		DBE5BCD92743FF7F00724336 /* BookDetailsRepositoryStubTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsRepositoryStubTestCase.swift; sourceTree = "<group>"; };
 		DBE5BCDB2743FFDD00724336 /* BookDetailsTestDataFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsTestDataFactory.swift; sourceTree = "<group>"; };
 		DBE5BCDD2744001D00724336 /* BookDetailsRepositoryTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsRepositoryTestCase.swift; sourceTree = "<group>"; };
+		DBE5BCE0274401F600724336 /* BookSearchRepositoryStubTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchRepositoryStubTestCase.swift; sourceTree = "<group>"; };
+		DBE5BCE22744021C00724336 /* BookSearchTestDataFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchTestDataFactory.swift; sourceTree = "<group>"; };
+		DBE5BCE42744028D00724336 /* BookSearchRepositoryTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchRepositoryTestCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -353,6 +359,9 @@
 		DBE5BCDF274401BA00724336 /* BookSearchRepositoryTests */ = {
 			isa = PBXGroup;
 			children = (
+				DBE5BCE42744028D00724336 /* BookSearchRepositoryTestCase.swift */,
+				DBE5BCE0274401F600724336 /* BookSearchRepositoryStubTestCase.swift */,
+				DBE5BCE22744021C00724336 /* BookSearchTestDataFactory.swift */,
 			);
 			path = BookSearchRepositoryTests;
 			sourceTree = "<group>";
@@ -518,8 +527,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBE5BCE32744021C00724336 /* BookSearchTestDataFactory.swift in Sources */,
+				DBE5BCE1274401F600724336 /* BookSearchRepositoryStubTestCase.swift in Sources */,
 				DBE5BCDA2743FF7F00724336 /* BookDetailsRepositoryStubTestCase.swift in Sources */,
 				DBE5BCDC2743FFDD00724336 /* BookDetailsTestDataFactory.swift in Sources */,
+				DBE5BCE52744028D00724336 /* BookSearchRepositoryTestCase.swift in Sources */,
 				DBE5BCDE2744001D00724336 /* BookDetailsRepositoryTestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
