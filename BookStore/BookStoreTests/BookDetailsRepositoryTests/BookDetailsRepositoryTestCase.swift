@@ -10,7 +10,7 @@ import XCTest
 
 import Moya
 
-class BookDetailsRepositoryTest: XCTestCase {
+class BookDetailsRepositoryTestCase: XCTestCase {
 
   var bookDetailsRepository: BookDetailsRepository!
 
