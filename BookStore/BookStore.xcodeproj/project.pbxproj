@@ -34,6 +34,7 @@
 		DBCA938E2745556200F5A439 /* BookDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA938D2745556200F5A439 /* BookDetailsRouter.swift */; };
 		DBCA93902745557600F5A439 /* BookDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA938F2745557600F5A439 /* BookDetailsViewController.swift */; };
 		DBCA93922745563300F5A439 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA93912745563300F5A439 /* SearchResultCell.swift */; };
+		DBCA93942745576D00F5A439 /* BookStoreUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA93932745576D00F5A439 /* BookStoreUITestsLaunchTests.swift */; };
 		DBE5BBE12743D0F300724336 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE5BBE02743D0F300724336 /* AppDelegate.swift */; };
 		DBE5BBE32743D0F300724336 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE5BBE22743D0F300724336 /* SceneDelegate.swift */; };
 		DBE5BBE82743D0F300724336 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBE5BBE62743D0F300724336 /* Main.storyboard */; };
@@ -137,6 +138,7 @@
 		DBCA938D2745556200F5A439 /* BookDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsRouter.swift; sourceTree = "<group>"; };
 		DBCA938F2745557600F5A439 /* BookDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsViewController.swift; sourceTree = "<group>"; };
 		DBCA93912745563300F5A439 /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
+		DBCA93932745576D00F5A439 /* BookStoreUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookStoreUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		DBE5BBDD2743D0F300724336 /* BookStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBE5BBE02743D0F300724336 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBE5BBE22743D0F300724336 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -330,6 +332,7 @@
 			isa = PBXGroup;
 			children = (
 				DBE5BC022743D0F400724336 /* BookStoreUITests.swift */,
+				DBCA93932745576D00F5A439 /* BookStoreUITestsLaunchTests.swift */,
 				DBE5BC042743D0F400724336 /* Info.plist */,
 			);
 			path = BookStoreUITests;
@@ -777,6 +780,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBE5BC032743D0F400724336 /* BookStoreUITests.swift in Sources */,
+				DBCA93942745576D00F5A439 /* BookStoreUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

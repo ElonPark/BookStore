@@ -9,31 +9,47 @@ import XCTest
 
 class BookStoreUITests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func testSearch() throws {
+      let app = XCUIApplication()
+      app.launch()
 
-        // In UI tests it is usually best to stop immediately when a failure occurs.
-        continueAfterFailure = false
+      let bookstoreNavigationBar = app.navigationBars["BookStore"]
+      let searchField = bookstoreNavigationBar.searchFields["Search"]
 
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+      searchField.tap()
+      searchField.typeText("swift")
+
+      app.keyboards.buttons["search"].tap()
+      wait(for: 2.0)
+
+      app.swipeUp()
+      wait(for: 0.2)
+
+      app.swipeUp()
+      app.tables.element.tap()
+
+      wait(for: 2.0)
+
+      app.swipeUp()
+      wait(for: 1.0)
+
+      let predicate = NSPredicate(format: "label CONTAINS 'http'")
+      app.cells.containing(predicate).firstMatch.tap()
+      wait(for: 2.0)
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    func wait(for duration: TimeInterval) {
+      let waitExpectation = expectation(description: "Waiting")
+
+      let when = DispatchTime.now() + duration
+      DispatchQueue.main.asyncAfter(deadline: when) {
+        waitExpectation.fulfill()
+      }
+
+      waitForExpectations(timeout: duration + 0.5)
     }
-
-    func testExample() throws {
-        // UI tests must launch the application that they test.
-        let app = XCUIApplication()
-        app.launch()
-
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
     func testLaunchPerformance() throws {
         if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
-            // This measures how long it takes to launch your application.
             measure(metrics: [XCTApplicationLaunchMetric()]) {
                 XCUIApplication().launch()
             }
