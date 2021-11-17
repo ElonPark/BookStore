@@ -41,6 +41,11 @@
 		DBCA939E27455B2B00F5A439 /* SearchRouterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA939D27455B2B00F5A439 /* SearchRouterSpy.swift */; };
 		DBCA93A027455B5400F5A439 /* SearchViewControllerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA939F27455B5300F5A439 /* SearchViewControllerSpy.swift */; };
 		DBCA93A227455B8000F5A439 /* SearchPresenterTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA93A127455B8000F5A439 /* SearchPresenterTestCase.swift */; };
+		DBCA93A627455D7300F5A439 /* BookDetailsPresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA93A527455D7300F5A439 /* BookDetailsPresenterSpy.swift */; };
+		DBCA93A827455D9300F5A439 /* BookDetailsRouterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA93A727455D9300F5A439 /* BookDetailsRouterSpy.swift */; };
+		DBCA93AA27455DB300F5A439 /* BookDetailsViewControllerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA93A927455DB300F5A439 /* BookDetailsViewControllerSpy.swift */; };
+		DBCA93AC27455DCC00F5A439 /* BookDetailsInteractorTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA93AB27455DCC00F5A439 /* BookDetailsInteractorTestCase.swift */; };
+		DBCA93AE27455E0300F5A439 /* BookDetailsPresenterTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA93AD27455E0300F5A439 /* BookDetailsPresenterTestCase.swift */; };
 		DBE5BBE12743D0F300724336 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE5BBE02743D0F300724336 /* AppDelegate.swift */; };
 		DBE5BBE32743D0F300724336 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE5BBE22743D0F300724336 /* SceneDelegate.swift */; };
 		DBE5BBE82743D0F300724336 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBE5BBE62743D0F300724336 /* Main.storyboard */; };
@@ -151,6 +156,11 @@
 		DBCA939D27455B2B00F5A439 /* SearchRouterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouterSpy.swift; sourceTree = "<group>"; };
 		DBCA939F27455B5300F5A439 /* SearchViewControllerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewControllerSpy.swift; sourceTree = "<group>"; };
 		DBCA93A127455B8000F5A439 /* SearchPresenterTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenterTestCase.swift; sourceTree = "<group>"; };
+		DBCA93A527455D7300F5A439 /* BookDetailsPresenterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsPresenterSpy.swift; sourceTree = "<group>"; };
+		DBCA93A727455D9300F5A439 /* BookDetailsRouterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsRouterSpy.swift; sourceTree = "<group>"; };
+		DBCA93A927455DB300F5A439 /* BookDetailsViewControllerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsViewControllerSpy.swift; sourceTree = "<group>"; };
+		DBCA93AB27455DCC00F5A439 /* BookDetailsInteractorTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsInteractorTestCase.swift; sourceTree = "<group>"; };
+		DBCA93AD27455E0300F5A439 /* BookDetailsPresenterTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsPresenterTestCase.swift; sourceTree = "<group>"; };
 		DBE5BBDD2743D0F300724336 /* BookStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBE5BBE02743D0F300724336 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBE5BBE22743D0F300724336 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -316,6 +326,26 @@
 			path = Spies;
 			sourceTree = "<group>";
 		};
+		DBCA93A327455D4200F5A439 /* BookDetailsTests */ = {
+			isa = PBXGroup;
+			children = (
+				DBCA93A427455D4D00F5A439 /* Spies */,
+				DBCA93AB27455DCC00F5A439 /* BookDetailsInteractorTestCase.swift */,
+				DBCA93AD27455E0300F5A439 /* BookDetailsPresenterTestCase.swift */,
+			);
+			path = BookDetailsTests;
+			sourceTree = "<group>";
+		};
+		DBCA93A427455D4D00F5A439 /* Spies */ = {
+			isa = PBXGroup;
+			children = (
+				DBCA93A527455D7300F5A439 /* BookDetailsPresenterSpy.swift */,
+				DBCA93A727455D9300F5A439 /* BookDetailsRouterSpy.swift */,
+				DBCA93A927455DB300F5A439 /* BookDetailsViewControllerSpy.swift */,
+			);
+			path = Spies;
+			sourceTree = "<group>";
+		};
 		DBE5BBD42743D0F300724336 = {
 			isa = PBXGroup;
 			children = (
@@ -354,6 +384,7 @@
 			children = (
 				DBE5BCD82743FF6C00724336 /* BookDetailsRepositoryTests */,
 				DBE5BCDF274401BA00724336 /* BookSearchRepositoryTests */,
+				DBCA93A327455D4200F5A439 /* BookDetailsTests */,
 				DBCA9397274559E500F5A439 /* SearchTests */,
 				DBCA9395274559B300F5A439 /* ISBN13ValidatorFake.swift */,
 				DBE5BCE82745153300724336 /* ISBN13ValidatorTestCase.swift */,
@@ -802,6 +833,8 @@
 				DBE5BCE32744021C00724336 /* BookSearchTestDataFactory.swift in Sources */,
 				DBCA93A027455B5400F5A439 /* SearchViewControllerSpy.swift in Sources */,
 				DBCA939C27455AE700F5A439 /* SearchPresenterSpy.swift in Sources */,
+				DBCA93AC27455DCC00F5A439 /* BookDetailsInteractorTestCase.swift in Sources */,
+				DBCA93A627455D7300F5A439 /* BookDetailsPresenterSpy.swift in Sources */,
 				DBCA9396274559B300F5A439 /* ISBN13ValidatorFake.swift in Sources */,
 				DBCA939927455A1100F5A439 /* SearchInteractorTestCase.swift in Sources */,
 				DBE5BCE1274401F600724336 /* BookSearchRepositoryStubTestCase.swift in Sources */,
@@ -809,7 +842,10 @@
 				DBE5BCDA2743FF7F00724336 /* BookDetailsRepositoryStubTestCase.swift in Sources */,
 				DBE5BCDC2743FFDD00724336 /* BookDetailsTestDataFactory.swift in Sources */,
 				DBE5BCE52744028D00724336 /* BookSearchRepositoryTestCase.swift in Sources */,
+				DBCA93A827455D9300F5A439 /* BookDetailsRouterSpy.swift in Sources */,
 				DBCA939E27455B2B00F5A439 /* SearchRouterSpy.swift in Sources */,
+				DBCA93AE27455E0300F5A439 /* BookDetailsPresenterTestCase.swift in Sources */,
+				DBCA93AA27455DB300F5A439 /* BookDetailsViewControllerSpy.swift in Sources */,
 				DBCA93A227455B8000F5A439 /* SearchPresenterTestCase.swift in Sources */,
 				DBE5BCDE2744001D00724336 /* BookDetailsRepositoryTestCase.swift in Sources */,
 			);
