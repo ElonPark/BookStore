@@ -37,6 +37,7 @@
 		DBE5BCE32744021C00724336 /* BookSearchTestDataFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE5BCE22744021C00724336 /* BookSearchTestDataFactory.swift */; };
 		DBE5BCE52744028D00724336 /* BookSearchRepositoryTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE5BCE42744028D00724336 /* BookSearchRepositoryTestCase.swift */; };
 		DBE5BCE72745151000724336 /* ISBN13Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE5BCE62745151000724336 /* ISBN13Validator.swift */; };
+		DBE5BCE92745153300724336 /* ISBN13ValidatorTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE5BCE82745153300724336 /* ISBN13ValidatorTestCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,7 @@
 		DBE5BCE22744021C00724336 /* BookSearchTestDataFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchTestDataFactory.swift; sourceTree = "<group>"; };
 		DBE5BCE42744028D00724336 /* BookSearchRepositoryTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchRepositoryTestCase.swift; sourceTree = "<group>"; };
 		DBE5BCE62745151000724336 /* ISBN13Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISBN13Validator.swift; sourceTree = "<group>"; };
+		DBE5BCE82745153300724336 /* ISBN13ValidatorTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISBN13ValidatorTestCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 				DBE5BCD82743FF6C00724336 /* BookDetailsRepositoryTests */,
 				DBE5BCDF274401BA00724336 /* BookSearchRepositoryTests */,
 				DBE5BBF92743D0F400724336 /* Info.plist */,
+				DBE5BCE82745153300724336 /* ISBN13ValidatorTestCase.swift */,
 			);
 			path = BookStoreTests;
 			sourceTree = "<group>";
@@ -533,6 +536,7 @@
 			files = (
 				DBE5BCE32744021C00724336 /* BookSearchTestDataFactory.swift in Sources */,
 				DBE5BCE1274401F600724336 /* BookSearchRepositoryStubTestCase.swift in Sources */,
+				DBE5BCE92745153300724336 /* ISBN13ValidatorTestCase.swift in Sources */,
 				DBE5BCDA2743FF7F00724336 /* BookDetailsRepositoryStubTestCase.swift in Sources */,
 				DBE5BCDC2743FFDD00724336 /* BookDetailsTestDataFactory.swift in Sources */,
 				DBE5BCE52744028D00724336 /* BookSearchRepositoryTestCase.swift in Sources */,
