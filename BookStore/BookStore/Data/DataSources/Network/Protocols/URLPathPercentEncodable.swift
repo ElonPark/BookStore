@@ -16,7 +16,7 @@ extension URLPathPercentEncodable {
         guard let urlPath = origin.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) else {
             fatalError("Percent Encoding Error to `\(origin)`")
         }
-
+        
         return urlPath
     }
 }

@@ -11,156 +11,156 @@ import XCTest
 
 class BookSearchRepositoryStubTestCase: XCTestCase {
 
-  var bookSearchRepository: BookSearchRepository!
+    var bookSearchRepository: BookSearchRepository!
 
-  override func setUpWithError() throws {
-    let provider = NetworkProvider<SearchAPI>(stubClosure: NetworkProvider.delayedStub(0.5))
-    bookSearchRepository = BookSearchRepositoryImpl(networkProvider: provider)
-  }
-
-  // MARK: - Search Test
-
-  func testBookSearchSuccessResponse() throws {
-    // Given
-    let keyword = "swift"
-
-      // when
-    var bookSearchResult: BookSearchResult?
-    var bookSearchResultError: Error?
-    let expectation = XCTestExpectation()
-
-    let testDataFactory = BookSearchTestDataFactory()
-    let expectResult = testDataFactory.makeSearchSuccessResponseTestData()
-
-    bookSearchRepository.search(byKeyword: keyword) { response in
-      switch response {
-      case let .success(result):
-        bookSearchResult = result
-
-      case let .failure(error):
-        bookSearchResultError = error
-      }
-
-      expectation.fulfill()
+    override func setUpWithError() throws {
+        let provider = NetworkProvider<SearchAPI>(stubClosure: NetworkProvider.delayedStub(0.5))
+        bookSearchRepository = BookSearchRepositoryImpl(networkProvider: provider)
     }
 
-    wait(for: [expectation], timeout: 1.0)
+    // MARK: - Search Test
 
-    // Then
-    let result = try XCTUnwrap(bookSearchResult)
-    XCTAssertEqual(result, expectResult)
-    XCTAssertNil(bookSearchResultError)
-  }
+    func testBookSearchSuccessResponse() throws {
+        // Given
+        let keyword = "swift"
 
-  func testBookSearchErrorResponse() throws {
-    // Given
-    let keyword = ""
+        // when
+        var bookSearchResult: BookSearchResult?
+        var bookSearchResultError: Error?
+        let expectation = XCTestExpectation()
 
-    let provider = NetworkProvider<SearchAPI>(
-        endpointClosure: SearchAPI.endpointErrorResponseClosure,
-        stubClosure: NetworkProvider.delayedStub(0.5)
-    )
-    bookSearchRepository = BookSearchRepositoryImpl(networkProvider: provider)
+        let testDataFactory = BookSearchTestDataFactory()
+        let expectResult = testDataFactory.makeSearchSuccessResponseTestData()
 
-      // when
-    var bookSearchResult: BookSearchResult?
-    var bookSearchResultError: Error?
-    let expectation = XCTestExpectation()
+        bookSearchRepository.search(byKeyword: keyword) { response in
+            switch response {
+            case let .success(result):
+                bookSearchResult = result
 
-    let testDataFactory = BookSearchTestDataFactory()
-    let expectResult = testDataFactory.makeSearchErrorResponseTestData()
+            case let .failure(error):
+                bookSearchResultError = error
+            }
 
-    bookSearchRepository.search(byKeyword: keyword) { response in
-      switch response {
-      case let .success(result):
-        bookSearchResult = result
+            expectation.fulfill()
+        }
 
-      case let .failure(error):
-        bookSearchResultError = error
-      }
+        wait(for: [expectation], timeout: 1.0)
 
-      expectation.fulfill()
+        // Then
+        let result = try XCTUnwrap(bookSearchResult)
+        XCTAssertEqual(result, expectResult)
+        XCTAssertNil(bookSearchResultError)
     }
 
-    wait(for: [expectation], timeout: 1.0)
+    func testBookSearchErrorResponse() throws {
+        // Given
+        let keyword = ""
 
-    // Then
-    let result = try XCTUnwrap(bookSearchResult)
-    XCTAssertEqual(result, expectResult)
-    XCTAssertNil(bookSearchResultError)
-  }
+        let provider = NetworkProvider<SearchAPI>(
+            endpointClosure: SearchAPI.endpointErrorResponseClosure,
+            stubClosure: NetworkProvider.delayedStub(0.5)
+        )
+        bookSearchRepository = BookSearchRepositoryImpl(networkProvider: provider)
 
-  // MARK: - Search with pagination Test
+        // when
+        var bookSearchResult: BookSearchResult?
+        var bookSearchResultError: Error?
+        let expectation = XCTestExpectation()
 
-  func testBookSearchWithPaginationSuccessResponse() throws {
-    // Given
-    let keyword = "swift"
-    let page = 2
+        let testDataFactory = BookSearchTestDataFactory()
+        let expectResult = testDataFactory.makeSearchErrorResponseTestData()
 
-      // when
-    var bookSearchResult: BookSearchResult?
-    var bookSearchResultError: Error?
-    let expectation = XCTestExpectation()
+        bookSearchRepository.search(byKeyword: keyword) { response in
+            switch response {
+            case let .success(result):
+                bookSearchResult = result
 
-    let testDataFactory = BookSearchTestDataFactory()
-    let expectResult = testDataFactory.makeSearchWithPaginationSuccessResponseTestData()
+            case let .failure(error):
+                bookSearchResultError = error
+            }
 
-    bookSearchRepository.search(byKeyword: keyword, withPagination: page) { response in
-      switch response {
-      case let .success(result):
-        bookSearchResult = result
+            expectation.fulfill()
+        }
 
-      case let .failure(error):
-        bookSearchResultError = error
-      }
+        wait(for: [expectation], timeout: 1.0)
 
-      expectation.fulfill()
+        // Then
+        let result = try XCTUnwrap(bookSearchResult)
+        XCTAssertEqual(result, expectResult)
+        XCTAssertNil(bookSearchResultError)
     }
 
-    wait(for: [expectation], timeout: 1.0)
+    // MARK: - Search with pagination Test
 
-    // Then
-    let result = try XCTUnwrap(bookSearchResult)
-    XCTAssertEqual(result, expectResult)
-    XCTAssertNil(bookSearchResultError)
-  }
+    func testBookSearchWithPaginationSuccessResponse() throws {
+        // Given
+        let keyword = "swift"
+        let page = 2
 
-  func testBookSearchWithPaginationErrorResponse() throws {
-    // Given
-    let keyword = ""
-    let page = 0
+        // when
+        var bookSearchResult: BookSearchResult?
+        var bookSearchResultError: Error?
+        let expectation = XCTestExpectation()
 
-    let provider = NetworkProvider<SearchAPI>(
-        endpointClosure: SearchAPI.endpointErrorResponseClosure,
-        stubClosure: NetworkProvider.delayedStub(0.5)
-    )
-    bookSearchRepository = BookSearchRepositoryImpl(networkProvider: provider)
+        let testDataFactory = BookSearchTestDataFactory()
+        let expectResult = testDataFactory.makeSearchWithPaginationSuccessResponseTestData()
 
-    // when
-    var bookSearchResult: BookSearchResult?
-    var bookSearchResultError: Error?
-    let expectation = XCTestExpectation()
+        bookSearchRepository.search(byKeyword: keyword, withPagination: page) { response in
+            switch response {
+            case let .success(result):
+                bookSearchResult = result
 
-    let testDataFactory = BookSearchTestDataFactory()
-    let expectResult = testDataFactory.makeSearchErrorResponseTestData()
+            case let .failure(error):
+                bookSearchResultError = error
+            }
 
-    bookSearchRepository.search(byKeyword: keyword, withPagination: page) { response in
-      switch response {
-      case let .success(result):
-        bookSearchResult = result
+            expectation.fulfill()
+        }
 
-      case let .failure(error):
-        bookSearchResultError = error
-      }
+        wait(for: [expectation], timeout: 1.0)
 
-      expectation.fulfill()
+        // Then
+        let result = try XCTUnwrap(bookSearchResult)
+        XCTAssertEqual(result, expectResult)
+        XCTAssertNil(bookSearchResultError)
     }
 
-    wait(for: [expectation], timeout: 1.0)
+    func testBookSearchWithPaginationErrorResponse() throws {
+        // Given
+        let keyword = ""
+        let page = 0
 
-    // Then
-    let result = try XCTUnwrap(bookSearchResult)
-    XCTAssertEqual(result, expectResult)
-    XCTAssertNil(bookSearchResultError)
-  }
+        let provider = NetworkProvider<SearchAPI>(
+            endpointClosure: SearchAPI.endpointErrorResponseClosure,
+            stubClosure: NetworkProvider.delayedStub(0.5)
+        )
+        bookSearchRepository = BookSearchRepositoryImpl(networkProvider: provider)
+
+        // when
+        var bookSearchResult: BookSearchResult?
+        var bookSearchResultError: Error?
+        let expectation = XCTestExpectation()
+
+        let testDataFactory = BookSearchTestDataFactory()
+        let expectResult = testDataFactory.makeSearchErrorResponseTestData()
+
+        bookSearchRepository.search(byKeyword: keyword, withPagination: page) { response in
+            switch response {
+            case let .success(result):
+                bookSearchResult = result
+
+            case let .failure(error):
+                bookSearchResultError = error
+            }
+
+            expectation.fulfill()
+        }
+
+        wait(for: [expectation], timeout: 1.0)
+
+        // Then
+        let result = try XCTUnwrap(bookSearchResult)
+        XCTAssertEqual(result, expectResult)
+        XCTAssertNil(bookSearchResultError)
+    }
 }

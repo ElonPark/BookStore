@@ -11,27 +11,27 @@ import Foundation
 import Moya
 
 extension SearchAPI.SampleDataFactory {
-  func makeFixtureData() -> Data {
-    switch endpoint {
-    case .search:
-      return convertToData(from: searchResponse)
+    func makeFixtureData() -> Data {
+        switch endpoint {
+        case .search:
+            return convertToData(from: searchResponse)
 
-    case .searchWithPagination:
-      return convertToData(from: searchWithPaginationResponse)
+        case .searchWithPagination:
+            return convertToData(from: searchWithPaginationResponse)
+        }
     }
-  }
 }
 
 extension SearchAPI.SampleDataFactory {
-  var errorResponse: String {
+    var errorResponse: String {
     """
     {
       "error": "[search] Invalid request"
     }
     """
-  }
+    }
 
-  var searchResponse: String {
+    var searchResponse: String {
     """
     {
       "error": "0",
@@ -121,11 +121,11 @@ extension SearchAPI.SampleDataFactory {
       ]
     }
     """
-  }
+    }
 }
 
 extension SearchAPI.SampleDataFactory {
-  var searchWithPaginationResponse: String {
+    var searchWithPaginationResponse: String {
     """
     {
       "error": "0",
@@ -215,6 +215,6 @@ extension SearchAPI.SampleDataFactory {
       ]
     }
     """
-  }
+    }
 }
 #endif

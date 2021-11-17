@@ -12,7 +12,7 @@ import Moya
 
 protocol EndpointTastable {
     var sampleDataFactory: FixtureFactory { get }
-
+    
     static func endpointErrorResponseClosure(_ target: Self) -> Endpoint
     static func endpointNetworkErrorClosure(_ target: Self) -> Endpoint
 }
@@ -30,7 +30,7 @@ extension EndpointTastable where Self: TargetType {
             httpHeaderFields: target.headers
         )
     }
-
+    
     static func endpointNetworkErrorClosure(_ target: Self) -> Endpoint {
         let url = URL(target: target).absoluteString
         return Endpoint(

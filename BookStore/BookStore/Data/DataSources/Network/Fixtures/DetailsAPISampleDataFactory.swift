@@ -11,24 +11,24 @@ import Foundation
 import Moya
 
 extension DetailsAPI.SampleDataFactory {
-  func makeFixtureData() -> Data {
-    switch endpoint {
-    case .books:
-      return convertToData(from: bookDetailsResponse)
+    func makeFixtureData() -> Data {
+        switch endpoint {
+        case .books:
+            return convertToData(from: bookDetailsResponse)
+        }
     }
-  }
 }
 
 extension DetailsAPI.SampleDataFactory {
-  var errorResponse: String {
+    var errorResponse: String {
     """
     {
       "error": "[books] Not found"
     }
     """
-  }
+    }
 
-  var bookDetailsResponse: String {
+    var bookDetailsResponse: String {
     """
     {
       "error": "0",
@@ -52,6 +52,6 @@ extension DetailsAPI.SampleDataFactory {
       }
     }
     """
-  }
+    }
 }
 #endif

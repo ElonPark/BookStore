@@ -8,18 +8,18 @@
 import Foundation
 
 protocol BookDetailsRepository {
-  func bookDetails(
-    isbn13: String,
-    completion: @escaping (Result<BookDetails, Error>) -> Void
-  )
+    func bookDetails(
+        isbn13: String,
+        completion: @escaping (Result<BookDetails, Error>) -> Void
+    )
 }
 
 final class BookDetailsRepositoryImpl: NetworkRepository<DetailsAPI>, BookDetailsRepository {
-
-  func bookDetails(
-    isbn13: String,
-    completion: @escaping (Result<BookDetails, Error>) -> Void
-  ) {
-    request(endpoint: .books(isbn13: isbn13), completion: completion)
-  }
+    
+    func bookDetails(
+        isbn13: String,
+        completion: @escaping (Result<BookDetails, Error>) -> Void
+    ) {
+        request(endpoint: .books(isbn13: isbn13), completion: completion)
+    }
 }

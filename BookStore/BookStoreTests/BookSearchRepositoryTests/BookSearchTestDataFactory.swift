@@ -9,101 +9,101 @@ import Foundation
 @testable import BookStore
 
 struct BookSearchTestDataFactory {
-  func makeSearchSuccessResponseTestData() -> BookSearchResult {
-    return BookSearchResult.success(
-      BookSearchResult.SearchResult(
-        error: "0",
-        total: 118,
-        page: 1,
-        books: [
-          BookSearchResult.Book(
-            title: "A Swift Kickstart, 2nd Edition",
-            subtitle: "Introducing the Swift Programming Language",
-            isbn13: "9780983066989",
-            price: "$29.99",
-            image: "https://itbook.store/img/books/9780983066989.png",
-            url: "https://itbook.store/books/9780983066989"
-          ),
-          BookSearchResult.Book(
-            title: "iOS 15 Programming Fundamentals with Swift",
-            subtitle: "Swift, Xcode, and Cocoa Basics",
-            isbn13: "9781098118501",
-            price: "$48.49",
-            image: "https://itbook.store/img/books/9781098118501.png",
-            url: "https://itbook.store/books/9781098118501"
-          ),
-          BookSearchResult.Book(
-            title: "Learn Computer Science with Swift",
-            subtitle: "Computation Concepts, Programming Paradigms, Data Management, and Modern Component Architectures with Swift and Playgrounds",
-            isbn13: "9781484230657",
-            price: "$17.23",
-            image: "https://itbook.store/img/books/9781484230657.png",
-            url: "https://itbook.store/books/9781484230657"
-          ),
-          BookSearchResult.Book(
-            title: "Deep Learning with Swift for TensorFlow",
-            subtitle: "Differentiable Programming with Swift",
-            isbn13: "9781484263297",
-            price: "$36.13",
-            image: "https://itbook.store/img/books/9781484263297.png",
-            url: "https://itbook.store/books/9781484263297"
-          ),
-          BookSearchResult.Book(
-            title: "OpenStack Swift",
-            subtitle: "Using, Administering, and Developing for Swift Object Storage",
-            isbn13: "9781491900826",
-            price: "$5.31",
-            image: "https://itbook.store/img/books/9781491900826.png",
-            url: "https://itbook.store/books/9781491900826"
-          ),
-          BookSearchResult.Book(
-            title: "iOS 8 Programming Fundamentals with Swift",
-            subtitle: "Swift, Xcode, and Cocoa Basics",
-            isbn13: "9781491908907",
-            price: "$3.65",
-            image: "https://itbook.store/img/books/9781491908907.png",
-            url: "https://itbook.store/books/9781491908907"
-          ),
-          BookSearchResult.Book(
-            title: "iOS 9 Programming Fundamentals with Swift",
-            subtitle: "Swift, Xcode, and Cocoa Basics",
-            isbn13: "9781491936771",
-            price: "$4.25",
-            image: "https://itbook.store/img/books/9781491936771.png",
-            url: "https://itbook.store/books/9781491936771"
-          ),
-          BookSearchResult.Book(
-            title: "iOS 11 Programming Fundamentals with Swift",
-            subtitle: "Swift, Xcode, and Cocoa Basics",
-            isbn13: "9781491999318",
-            price: "$23.03",
-            image: "https://itbook.store/img/books/9781491999318.png",
-            url: "https://itbook.store/books/9781491999318"
-          ),
-          BookSearchResult.Book(
-            title: "iOS 12 Programming Fundamentals with Swift",
-            subtitle: "Swift, Xcode, and Cocoa Basics",
-            isbn13: "9781492044550",
-            price: "$56.77",
-            image: "https://itbook.store/img/books/9781492044550.png",
-            url: "https://itbook.store/books/9781492044550"
-          ),
-          BookSearchResult.Book(
-            title: "iOS 14 Programming Fundamentals with Swift",
-            subtitle: "Swift, Xcode, and Cocoa Basics",
-            isbn13: "9781492092094",
-            price: "$41.20",
-            image: "https://itbook.store/img/books/9781492092094.png",
-            url: "https://itbook.store/books/9781492092094"
-          )
-        ]
-      )
-    )
-  }
+    func makeSearchSuccessResponseTestData() -> BookSearchResult {
+        return BookSearchResult.success(
+            BookSearchResult.SearchResult(
+                error: "0",
+                total: 118,
+                page: 1,
+                books: [
+                    BookSearchResult.Book(
+                        title: "A Swift Kickstart, 2nd Edition",
+                        subtitle: "Introducing the Swift Programming Language",
+                        isbn13: "9780983066989",
+                        price: "$29.99",
+                        image: "https://itbook.store/img/books/9780983066989.png",
+                        url: "https://itbook.store/books/9780983066989"
+                    ),
+                    BookSearchResult.Book(
+                        title: "iOS 15 Programming Fundamentals with Swift",
+                        subtitle: "Swift, Xcode, and Cocoa Basics",
+                        isbn13: "9781098118501",
+                        price: "$48.49",
+                        image: "https://itbook.store/img/books/9781098118501.png",
+                        url: "https://itbook.store/books/9781098118501"
+                    ),
+                    BookSearchResult.Book(
+                        title: "Learn Computer Science with Swift",
+                        subtitle: "Computation Concepts, Programming Paradigms, Data Management, and Modern Component Architectures with Swift and Playgrounds",
+                        isbn13: "9781484230657",
+                        price: "$17.23",
+                        image: "https://itbook.store/img/books/9781484230657.png",
+                        url: "https://itbook.store/books/9781484230657"
+                    ),
+                    BookSearchResult.Book(
+                        title: "Deep Learning with Swift for TensorFlow",
+                        subtitle: "Differentiable Programming with Swift",
+                        isbn13: "9781484263297",
+                        price: "$36.13",
+                        image: "https://itbook.store/img/books/9781484263297.png",
+                        url: "https://itbook.store/books/9781484263297"
+                    ),
+                    BookSearchResult.Book(
+                        title: "OpenStack Swift",
+                        subtitle: "Using, Administering, and Developing for Swift Object Storage",
+                        isbn13: "9781491900826",
+                        price: "$5.31",
+                        image: "https://itbook.store/img/books/9781491900826.png",
+                        url: "https://itbook.store/books/9781491900826"
+                    ),
+                    BookSearchResult.Book(
+                        title: "iOS 8 Programming Fundamentals with Swift",
+                        subtitle: "Swift, Xcode, and Cocoa Basics",
+                        isbn13: "9781491908907",
+                        price: "$3.65",
+                        image: "https://itbook.store/img/books/9781491908907.png",
+                        url: "https://itbook.store/books/9781491908907"
+                    ),
+                    BookSearchResult.Book(
+                        title: "iOS 9 Programming Fundamentals with Swift",
+                        subtitle: "Swift, Xcode, and Cocoa Basics",
+                        isbn13: "9781491936771",
+                        price: "$4.25",
+                        image: "https://itbook.store/img/books/9781491936771.png",
+                        url: "https://itbook.store/books/9781491936771"
+                    ),
+                    BookSearchResult.Book(
+                        title: "iOS 11 Programming Fundamentals with Swift",
+                        subtitle: "Swift, Xcode, and Cocoa Basics",
+                        isbn13: "9781491999318",
+                        price: "$23.03",
+                        image: "https://itbook.store/img/books/9781491999318.png",
+                        url: "https://itbook.store/books/9781491999318"
+                    ),
+                    BookSearchResult.Book(
+                        title: "iOS 12 Programming Fundamentals with Swift",
+                        subtitle: "Swift, Xcode, and Cocoa Basics",
+                        isbn13: "9781492044550",
+                        price: "$56.77",
+                        image: "https://itbook.store/img/books/9781492044550.png",
+                        url: "https://itbook.store/books/9781492044550"
+                    ),
+                    BookSearchResult.Book(
+                        title: "iOS 14 Programming Fundamentals with Swift",
+                        subtitle: "Swift, Xcode, and Cocoa Basics",
+                        isbn13: "9781492092094",
+                        price: "$41.20",
+                        image: "https://itbook.store/img/books/9781492092094.png",
+                        url: "https://itbook.store/books/9781492092094"
+                    )
+                ]
+            )
+        )
+    }
 
-  func makeSearchErrorResponseTestData() -> BookSearchResult {
-    return BookSearchResult.failure("[search] Invalid request")
-  }
+    func makeSearchErrorResponseTestData() -> BookSearchResult {
+        return BookSearchResult.failure("[search] Invalid request")
+    }
 }
 
 // MARK: - Search with pagination test data
