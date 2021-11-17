@@ -41,7 +41,7 @@ class BookSearchRepositoryTestCase: XCTestCase {
             expectation.fulfill()
         }
 
-        wait(for: [expectation], timeout: 3.0)
+        wait(for: [expectation], timeout: 4.0)
 
         // Then
         XCTAssertNotNil(bookSearchResult)
