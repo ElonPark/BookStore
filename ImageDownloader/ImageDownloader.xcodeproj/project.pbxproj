@@ -125,7 +125,7 @@
 		DBE5BD6027452FD700724336 /* ImageDownloaderTests */ = {
 			isa = PBXGroup;
 			children = (
-				DBE5BD8B27453D0400724336 /* ImageCascheTests */,
+				DBE5BD8B27453D0400724336 /* ImageCacheTests */,
 				DBE5BD9C27453ED500724336 /* Spies */,
 				DBE5BD8527453A4500724336 /* CacheKeyTestCase.swift */,
 				DBE5BD9A27453EB200724336 /* ImageDownloaderTestCase.swift */,
@@ -166,14 +166,14 @@
 			path = MemoryCache;
 			sourceTree = "<group>";
 		};
-		DBE5BD8B27453D0400724336 /* ImageCascheTests */ = {
+		DBE5BD8B27453D0400724336 /* ImageCacheTests */ = {
 			isa = PBXGroup;
 			children = (
 				DBE5BD9927453E8000724336 /* MemoryCacheTests */,
 				DBE5BD8C27453D7900724336 /* DiskCacheTests */,
 				DBE5BD8E27453DBD00724336 /* ImageCacheTestCase.swift */,
 			);
-			path = ImageCascheTests;
+			path = ImageCacheTests;
 			sourceTree = "<group>";
 		};
 		DBE5BD8C27453D7900724336 /* DiskCacheTests */ = {
