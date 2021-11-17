@@ -36,6 +36,7 @@
 		DBE5BCE1274401F600724336 /* BookSearchRepositoryStubTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE5BCE0274401F600724336 /* BookSearchRepositoryStubTestCase.swift */; };
 		DBE5BCE32744021C00724336 /* BookSearchTestDataFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE5BCE22744021C00724336 /* BookSearchTestDataFactory.swift */; };
 		DBE5BCE52744028D00724336 /* BookSearchRepositoryTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE5BCE42744028D00724336 /* BookSearchRepositoryTestCase.swift */; };
+		DBE5BCE72745151000724336 /* ISBN13Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE5BCE62745151000724336 /* ISBN13Validator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,7 @@
 		DBE5BCE0274401F600724336 /* BookSearchRepositoryStubTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchRepositoryStubTestCase.swift; sourceTree = "<group>"; };
 		DBE5BCE22744021C00724336 /* BookSearchTestDataFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchTestDataFactory.swift; sourceTree = "<group>"; };
 		DBE5BCE42744028D00724336 /* BookSearchRepositoryTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchRepositoryTestCase.swift; sourceTree = "<group>"; };
+		DBE5BCE62745151000724336 /* ISBN13Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISBN13Validator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -274,6 +276,7 @@
 		DBE5BCA72743D6EC00724336 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				DBE5BCE62745151000724336 /* ISBN13Validator.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -519,6 +522,7 @@
 				DBE5BCC12743DEBF00724336 /* DetailsAPI.swift in Sources */,
 				DBE5BCCE2743FE0B00724336 /* BookSearchResult.swift in Sources */,
 				DBE5BCCC2743FDEC00724336 /* BookDetails.swift in Sources */,
+				DBE5BCE72745151000724336 /* ISBN13Validator.swift in Sources */,
 				DBE5BCD22743FEB400724336 /* BookSearchRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
