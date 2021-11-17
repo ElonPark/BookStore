@@ -40,6 +40,7 @@
 		DBE5BCE92745153300724336 /* ISBN13ValidatorTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE5BCE82745153300724336 /* ISBN13ValidatorTestCase.swift */; };
 		DBE5BCED274522C000724336 /* ReuseIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE5BCEC274522C000724336 /* ReuseIdentifiable.swift */; };
 		DBE5BCEF274522DE00724336 /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE5BCEE274522DE00724336 /* UITableViewExtensions.swift */; };
+		DBE5BCF3274523A400724336 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE5BCF2274523A400724336 /* Theme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,7 @@
 		DBE5BCE82745153300724336 /* ISBN13ValidatorTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISBN13ValidatorTestCase.swift; sourceTree = "<group>"; };
 		DBE5BCEC274522C000724336 /* ReuseIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseIdentifiable.swift; sourceTree = "<group>"; };
 		DBE5BCEE274522DE00724336 /* UITableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
+		DBE5BCF2274523A400724336 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -271,6 +273,7 @@
 		DBE5BCA52743D68B00724336 /* Theme */ = {
 			isa = PBXGroup;
 			children = (
+				DBE5BCF2274523A400724336 /* Theme.swift */,
 			);
 			path = Theme;
 			sourceTree = "<group>";
@@ -533,6 +536,7 @@
 				DBE5BCEF274522DE00724336 /* UITableViewExtensions.swift in Sources */,
 				DBE5BCBF2743DD7100724336 /* SearchAPISampleDataFactory.swift in Sources */,
 				DBE5BBE52743D0F300724336 /* ViewController.swift in Sources */,
+				DBE5BCF3274523A400724336 /* Theme.swift in Sources */,
 				DBE5BCC52743E9DE00724336 /* DetailsAPISampleDataFactory.swift in Sources */,
 				DBE5BCB52743D9D000724336 /* SearchAPI.swift in Sources */,
 				DBE5BBE12743D0F300724336 /* AppDelegate.swift in Sources */,
