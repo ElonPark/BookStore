@@ -46,7 +46,7 @@ final class BookDetailsInteractor: BookDetailsInteractable {
             requestBookDetailsWhenISBN13IsValid()
 
         case let .routeToSafari(url):
-            routeRequsetToSafari(with: url)
+            routeRequestToSafari(with: url)
         }
     }
 
@@ -92,7 +92,7 @@ final class BookDetailsInteractor: BookDetailsInteractable {
         presenter.presentBookDetails(response: response)
     }
 
-    private func routeRequsetToSafari(with url: URL?) {
+    private func routeRequestToSafari(with url: URL?) {
         if let url = url {
             router?.routeToSafari(withURL: url)
         } else {

@@ -35,6 +35,12 @@
 		DBCA93902745557600F5A439 /* BookDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA938F2745557600F5A439 /* BookDetailsViewController.swift */; };
 		DBCA93922745563300F5A439 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA93912745563300F5A439 /* SearchResultCell.swift */; };
 		DBCA93942745576D00F5A439 /* BookStoreUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA93932745576D00F5A439 /* BookStoreUITestsLaunchTests.swift */; };
+		DBCA9396274559B300F5A439 /* ISBN13ValidatorFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA9395274559B300F5A439 /* ISBN13ValidatorFake.swift */; };
+		DBCA939927455A1100F5A439 /* SearchInteractorTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA939827455A1100F5A439 /* SearchInteractorTestCase.swift */; };
+		DBCA939C27455AE700F5A439 /* SearchPresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA939B27455AE700F5A439 /* SearchPresenterSpy.swift */; };
+		DBCA939E27455B2B00F5A439 /* SearchRouterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA939D27455B2B00F5A439 /* SearchRouterSpy.swift */; };
+		DBCA93A027455B5400F5A439 /* SearchViewControllerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA939F27455B5300F5A439 /* SearchViewControllerSpy.swift */; };
+		DBCA93A227455B8000F5A439 /* SearchPresenterTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA93A127455B8000F5A439 /* SearchPresenterTestCase.swift */; };
 		DBE5BBE12743D0F300724336 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE5BBE02743D0F300724336 /* AppDelegate.swift */; };
 		DBE5BBE32743D0F300724336 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE5BBE22743D0F300724336 /* SceneDelegate.swift */; };
 		DBE5BBE82743D0F300724336 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBE5BBE62743D0F300724336 /* Main.storyboard */; };
@@ -139,6 +145,12 @@
 		DBCA938F2745557600F5A439 /* BookDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsViewController.swift; sourceTree = "<group>"; };
 		DBCA93912745563300F5A439 /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		DBCA93932745576D00F5A439 /* BookStoreUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookStoreUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DBCA9395274559B300F5A439 /* ISBN13ValidatorFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISBN13ValidatorFake.swift; sourceTree = "<group>"; };
+		DBCA939827455A1100F5A439 /* SearchInteractorTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractorTestCase.swift; sourceTree = "<group>"; };
+		DBCA939B27455AE700F5A439 /* SearchPresenterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenterSpy.swift; sourceTree = "<group>"; };
+		DBCA939D27455B2B00F5A439 /* SearchRouterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouterSpy.swift; sourceTree = "<group>"; };
+		DBCA939F27455B5300F5A439 /* SearchViewControllerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewControllerSpy.swift; sourceTree = "<group>"; };
+		DBCA93A127455B8000F5A439 /* SearchPresenterTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenterTestCase.swift; sourceTree = "<group>"; };
 		DBE5BBDD2743D0F300724336 /* BookStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBE5BBE02743D0F300724336 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBE5BBE22743D0F300724336 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -284,6 +296,26 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		DBCA9397274559E500F5A439 /* SearchTests */ = {
+			isa = PBXGroup;
+			children = (
+				DBCA939A27455AC700F5A439 /* Spies */,
+				DBCA939827455A1100F5A439 /* SearchInteractorTestCase.swift */,
+				DBCA93A127455B8000F5A439 /* SearchPresenterTestCase.swift */,
+			);
+			path = SearchTests;
+			sourceTree = "<group>";
+		};
+		DBCA939A27455AC700F5A439 /* Spies */ = {
+			isa = PBXGroup;
+			children = (
+				DBCA939B27455AE700F5A439 /* SearchPresenterSpy.swift */,
+				DBCA939D27455B2B00F5A439 /* SearchRouterSpy.swift */,
+				DBCA939F27455B5300F5A439 /* SearchViewControllerSpy.swift */,
+			);
+			path = Spies;
+			sourceTree = "<group>";
+		};
 		DBE5BBD42743D0F300724336 = {
 			isa = PBXGroup;
 			children = (
@@ -322,8 +354,10 @@
 			children = (
 				DBE5BCD82743FF6C00724336 /* BookDetailsRepositoryTests */,
 				DBE5BCDF274401BA00724336 /* BookSearchRepositoryTests */,
-				DBE5BBF92743D0F400724336 /* Info.plist */,
+				DBCA9397274559E500F5A439 /* SearchTests */,
+				DBCA9395274559B300F5A439 /* ISBN13ValidatorFake.swift */,
 				DBE5BCE82745153300724336 /* ISBN13ValidatorTestCase.swift */,
+				DBE5BBF92743D0F400724336 /* Info.plist */,
 			);
 			path = BookStoreTests;
 			sourceTree = "<group>";
@@ -766,11 +800,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBE5BCE32744021C00724336 /* BookSearchTestDataFactory.swift in Sources */,
+				DBCA93A027455B5400F5A439 /* SearchViewControllerSpy.swift in Sources */,
+				DBCA939C27455AE700F5A439 /* SearchPresenterSpy.swift in Sources */,
+				DBCA9396274559B300F5A439 /* ISBN13ValidatorFake.swift in Sources */,
+				DBCA939927455A1100F5A439 /* SearchInteractorTestCase.swift in Sources */,
 				DBE5BCE1274401F600724336 /* BookSearchRepositoryStubTestCase.swift in Sources */,
 				DBE5BCE92745153300724336 /* ISBN13ValidatorTestCase.swift in Sources */,
 				DBE5BCDA2743FF7F00724336 /* BookDetailsRepositoryStubTestCase.swift in Sources */,
 				DBE5BCDC2743FFDD00724336 /* BookDetailsTestDataFactory.swift in Sources */,
 				DBE5BCE52744028D00724336 /* BookSearchRepositoryTestCase.swift in Sources */,
+				DBCA939E27455B2B00F5A439 /* SearchRouterSpy.swift in Sources */,
+				DBCA93A227455B8000F5A439 /* SearchPresenterTestCase.swift in Sources */,
 				DBE5BCDE2744001D00724336 /* BookDetailsRepositoryTestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
