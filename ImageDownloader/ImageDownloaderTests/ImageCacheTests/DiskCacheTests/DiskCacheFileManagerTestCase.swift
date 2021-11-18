@@ -184,8 +184,8 @@ class DiskCacheFileManagerTest: XCTestCase {
         let imageContainer2 = ImageContainer(key: CacheKey(url: url2), image: UIImage())
         
         // When
-        let fileURL1 = try XCTUnwrap(diskCacheFileManager.url(byFilename: String(url1.absoluteString.hashValue)))
-        let fileURL2 = try XCTUnwrap(diskCacheFileManager.url(byFilename: String(url2.absoluteString.hashValue)))
+        let fileURL1 = try XCTUnwrap(diskCacheFileManager.url(byFilename: String(url1.hashValue)))
+        let fileURL2 = try XCTUnwrap(diskCacheFileManager.url(byFilename: String(url2.hashValue)))
         diskCacheFileManager.writeToDisk(imageContainer1, to: fileURL1)
         diskCacheFileManager.writeToDisk(imageContainer2, to: fileURL2)
         

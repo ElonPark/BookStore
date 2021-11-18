@@ -146,7 +146,7 @@ final class DiskCache: DiskCaching {
     }
     
     private func filename(forKey key: CacheKey) -> String? {
-        return String(key.key.hashValue)
+        return String(key.key)
     }
     
     private func totalDiskCacheSize() -> Int {
