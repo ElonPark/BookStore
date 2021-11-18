@@ -8,7 +8,7 @@
 import Alamofire
 
 public protocol ImageDownloadCancelable {
-  @discardableResult func cancel() -> Self
+    @discardableResult func cancel() -> Self
 }
 
 extension Alamofire.Request: ImageDownloadCancelable {}
