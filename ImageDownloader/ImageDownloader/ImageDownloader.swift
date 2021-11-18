@@ -11,15 +11,15 @@ import UIKit
 import Alamofire
 
 public final class ImageDownloader {
-
+    
     public static var shared = ImageDownloader()
-
+    
     let cache: ImageCaching
-
+    
     init(cache: ImageCaching = ImageCache()) {
         self.cache = cache
     }
-
+    
     @discardableResult
     public func loadImage(
         with url: URL,
@@ -29,7 +29,7 @@ public final class ImageDownloader {
             completion(.success(cachedImage))
             return nil
         }
-
+        
         let session = AF.download(url)
             .responseData { [weak self] response in
                 switch response.result {
@@ -39,21 +39,21 @@ public final class ImageDownloader {
                     } else {
                         completion(.failure(URLError(.cannotDecodeContentData)))
                     }
-
+                    
                 case let .failure(error):
                     completion(.failure(error))
                 }
             }
-
+        
         return session
     }
-
+    
     private func processingImage(from data: Data, with url: URL) -> UIImage? {
         guard let image = UIImage(data: data) else { return nil }
         cache.store(image: image, with: url)
         return image
     }
-
+    
     private func cachedImage(by url: URL) -> UIImage? {
         guard cache.hasCachedImage(by: url) else { return nil }
         return cache.cachedImage(by: url)
