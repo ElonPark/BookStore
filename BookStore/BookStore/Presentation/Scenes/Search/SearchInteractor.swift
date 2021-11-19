@@ -26,6 +26,9 @@ final class SearchInteractor: SearchInteractable {
     private let bookSearchRepository: BookSearchRepository
     private let isbn13Validator: ISBN13validating
 
+    private var searchKeywordRequest: RequestCancellable?
+    private var searchNextPageRequest: RequestCancellable?
+
     init(
         initialState: SearchModel.Search.State,
         bookSearchRepository: BookSearchRepository,
@@ -51,14 +54,17 @@ final class SearchInteractor: SearchInteractable {
 
     private func search(keyword: String) {
         guard let searchKeyword = validatedSearchKeyword(keyword) else { return }
+
+        cancelSearchRequestsIfNeeded()
         state.searchKeyword = searchKeyword
 
-        bookSearchRepository.search(byKeyword: searchKeyword) { [weak self] response in
+        searchKeywordRequest = bookSearchRepository.search(byKeyword: searchKeyword) { [weak self] response in
             switch response {
             case let .success(result):
                 self?.presentSearchResultWhenSearchByKeyword(result)
 
             case let .failure(error):
+                guard case .undefinedError = error else { return }
                 self?.presentErrorResponse(error: .searchError(message: error.localizedDescription))
             }
         }
@@ -72,6 +78,21 @@ final class SearchInteractor: SearchInteractable {
         else { return nil }
 
         return encodeKeyword
+    }
+
+    private func cancelSearchRequestsIfNeeded() {
+        cancelSearchRequest()
+        cancelSearchNextPageRequest()
+    }
+
+    private func cancelSearchRequest() {
+        guard let isCancelled = searchKeywordRequest?.isCancelled, !isCancelled else { return }
+        searchKeywordRequest?.cancel()
+    }
+
+    private func cancelSearchNextPageRequest() {
+        guard let isCancelled = searchNextPageRequest?.isCancelled, !isCancelled else { return }
+        searchNextPageRequest?.cancel()
     }
 
     private func presentSearchResultWhenSearchByKeyword(_ result: BookSearchResult) {
@@ -104,7 +125,7 @@ final class SearchInteractor: SearchInteractable {
         guard !state.isLoading, hasNextPage(), let parameters = searchNextPageParameters() else { return }
 
         state.isLoading = true
-        bookSearchRepository.search(
+        searchNextPageRequest = bookSearchRepository.search(
             byKeyword: parameters.keyword,
             withPagination: parameters.page
         ) { [weak self] response in
@@ -117,22 +138,6 @@ final class SearchInteractor: SearchInteractable {
             }
 
             self?.state.isLoading = false
-        }
-    }
-
-    private func presentSearchResultWhenSearchNextPage(_ result: BookSearchResult) {
-        switch result {
-        case let .success(searchResult):
-            guard searchResult.page != state.searchResult?.page else { return }
-            var newState = state
-            newState.searchResult = searchResult
-            newState.books.append(contentsOf: searchResult.books)
-            state = newState
-
-            presentSearchResult()
-
-        case let .failure(errorMessage):
-            print(errorMessage)
         }
     }
 
@@ -151,6 +156,22 @@ final class SearchInteractor: SearchInteractable {
         else { return nil}
 
         return (keyword, currentPage + 1)
+    }
+
+    private func presentSearchResultWhenSearchNextPage(_ result: BookSearchResult) {
+        switch result {
+        case let .success(searchResult):
+            guard searchResult.page != state.searchResult?.page else { return }
+            var newState = state
+            newState.searchResult = searchResult
+            newState.books.append(contentsOf: searchResult.books)
+            state = newState
+
+            presentSearchResult()
+
+        case let .failure(errorMessage):
+            print(errorMessage)
+        }
     }
 
     private func routeToBookDetailsWhenISBN13IsValid(_ isbn13: String) {

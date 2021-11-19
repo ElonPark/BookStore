@@ -20,7 +20,7 @@ class NetworkRepository<API: TargetType> {
     @discardableResult
     func request<Response: Decodable>(
         endpoint: API,
-        completion: @escaping (Result<Response, Error>) -> Void
+        completion: @escaping (Result<Response, RepositoryError>) -> Void
     ) -> RequestCancellable {
         let cancellable = provider.request(endpoint) { result in
             switch result {
@@ -32,10 +32,10 @@ class NetworkRepository<API: TargetType> {
                     completion(.success(data))
                     
                 } catch {
-                    completion(.failure(error))
+                    completion(.failure(RepositoryError(error)))
                 }
             case let .failure(error):
-                completion(.failure(error))
+                completion(.failure(RepositoryError(error)))
             }
         }
 
