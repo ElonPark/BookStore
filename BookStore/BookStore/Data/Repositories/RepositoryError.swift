@@ -19,14 +19,22 @@ enum RepositoryError: Error {
     }
 
     init(_ error: Error) {
-        if let moyaError = error as? MoyaError,
-            case let .underlying(underlyingError, _) = moyaError,
-            let afError = underlyingError.asAFError,
-            afError.isExplicitlyCancelledError {
-            self = .explicitlyCancelledError(underlyingError)
+        self = Self.makeRepositoryError(error)
+    }
 
-        } else {
-            self = .undefinedError(error)
+    private static func makeRepositoryError(_ error: Error) -> Self {
+        let undefinedError = Self.undefinedError(error)
+
+        guard let moyaError = error as? MoyaError,
+              case let .underlying(underlyingError, _) = moyaError
+        else { return undefinedError }
+
+        if let afError = underlyingError.asAFError, afError.isExplicitlyCancelledError {
+            return .explicitlyCancelledError(underlyingError)
         }
+
+        let nsError = underlyingError as NSError
+        guard nsError.code == URLError.cancelled.rawValue else { return undefinedError }
+        return .explicitlyCancelledError(underlyingError)
     }
 }
