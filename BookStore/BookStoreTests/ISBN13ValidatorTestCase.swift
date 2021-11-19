@@ -9,13 +9,13 @@ import XCTest
 @testable import BookStore
 
 class ISBN13ValidatorTestCase: XCTestCase {
-
+    
     var validator: ISBN13validating!
-
+    
     override func setUpWithError() throws {
         validator = ISBN13Validator()
     }
-
+    
     func testValidISBN13() throws {
         // Given
         let isbnList = [
@@ -33,14 +33,14 @@ class ISBN13ValidatorTestCase: XCTestCase {
             "978 0 596 52068 7",
             "9780596520687"
         ]
-
+        
         // when
         let result = isbnList.filter { validator.isValid(isbn13: $0) }
-
+        
         // Then
         XCTAssertEqual(result, isbnList)
     }
-
+    
     func testInvalidISBN13() throws {
         // Given
         let isbnList = [
@@ -59,14 +59,14 @@ class ISBN13ValidatorTestCase: XCTestCase {
             "test",
             "q1w2e3r4"
         ]
-
+        
         // when
         let result = isbnList.filter { validator.isValid(isbn13: $0) }
-
+        
         // Then
         XCTAssertEqual(result.count, 0)
     }
-
+    
     func testFilteringISBN13() throws {
         let validISBNList = [
             "978-1734314502",
@@ -102,13 +102,13 @@ class ISBN13ValidatorTestCase: XCTestCase {
             "test",
             "q1w2e3r4"
         ]
-
+        
         var isbnList = validISBNList + invalidISBNList
         isbnList.shuffle()
-
+        
         // when
         let result = isbnList.filter { validator.isValid(isbn13: $0) }
-
+        
         // Then
         XCTAssertEqual(result.sorted(), validISBNList.sorted())
     }
