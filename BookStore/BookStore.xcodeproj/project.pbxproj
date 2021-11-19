@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB48BF3F27480654006FCD47 /* RequestCancellable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB48BF3E27480654006FCD47 /* RequestCancellable.swift */; };
 		DBCA93522745427400F5A439 /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA93512745427400F5A439 /* SearchModel.swift */; };
 		DBCA93542745429500F5A439 /* DisplayErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA93532745429500F5A439 /* DisplayErrorMessage.swift */; };
 		DBCA9356274542B900F5A439 /* BooktTitleHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA9355274542B900F5A439 /* BooktTitleHeaderViewModel.swift */; };
@@ -122,6 +123,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DB48BF3E27480654006FCD47 /* RequestCancellable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestCancellable.swift; sourceTree = "<group>"; };
 		DBCA93512745427400F5A439 /* SearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
 		DBCA93532745429500F5A439 /* DisplayErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayErrorMessage.swift; sourceTree = "<group>"; };
 		DBCA9355274542B900F5A439 /* BooktTitleHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooktTitleHeaderViewModel.swift; sourceTree = "<group>"; };
@@ -236,6 +238,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB48BF40274806C4006FCD47 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				DB48BF3E27480654006FCD47 /* RequestCancellable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		DBCA93502745426300F5A439 /* Search */ = {
 			isa = PBXGroup;
 			children = (
@@ -537,6 +547,7 @@
 		DBE5BCAE2743D77200724336 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				DB48BF40274806C4006FCD47 /* Protocols */,
 				DBE5BCCF2743FE6800724336 /* NetworkRepository.swift */,
 				DBE5BCD32743FEDD00724336 /* BookDetailsRepository.swift */,
 				DBE5BCD12743FEB400724336 /* BookSearchRepository.swift */,
@@ -802,6 +813,7 @@
 				DBCA938A2745552E00F5A439 /* BookDetailsInteractor.swift in Sources */,
 				DBE5BCC32743E0DF00724336 /* URLPathPercentEncodable.swift in Sources */,
 				DBE5BCD02743FE6800724336 /* NetworkRepository.swift in Sources */,
+				DB48BF3F27480654006FCD47 /* RequestCancellable.swift in Sources */,
 				DBCA936A2745491500F5A439 /* BookTitleHeaderView.swift in Sources */,
 				DBCA93882745550300F5A439 /* DetailsViewModelSection.swift in Sources */,
 				DBCA93642745477400F5A439 /* BookDetailsCell.swift in Sources */,

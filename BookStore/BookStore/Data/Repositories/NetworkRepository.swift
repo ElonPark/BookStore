@@ -17,8 +17,12 @@ class NetworkRepository<API: TargetType> {
         self.provider = networkProvider
     }
     
-    func request<Response: Decodable>(endpoint: API, completion: @escaping (Result<Response, Error>) -> Void) {
-        provider.request(endpoint) { result in
+    @discardableResult
+    func request<Response: Decodable>(
+        endpoint: API,
+        completion: @escaping (Result<Response, Error>) -> Void
+    ) -> RequestCancellable {
+        let cancellable = provider.request(endpoint) { result in
             switch result {
             case let .success(response):
                 do {
@@ -34,5 +38,7 @@ class NetworkRepository<API: TargetType> {
                 completion(.failure(error))
             }
         }
+
+        return CancellableWrapper(cancellable: cancellable)
     }
 }
