@@ -140,8 +140,11 @@ class BookDetailsRepositoryTestCase: XCTestCase {
     XCTAssertNil(bookDetails)
     XCTAssertNotNil(bookDetailsError)
 
-    let moyaError = try XCTUnwrap(bookDetailsError as? MoyaError)
-    let statusCode = try XCTUnwrap(moyaError.response?.statusCode)
+    var moyaError: MoyaError? {
+        guard case let .undefinedError(error) = (bookDetailsError as? RepositoryError) else { return  nil }
+        return error as? MoyaError
+    }
+    let statusCode = try XCTUnwrap(moyaError?.response?.statusCode)
     XCTAssertEqual(statusCode, 404)
   }
 }
