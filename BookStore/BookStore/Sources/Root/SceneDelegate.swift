@@ -23,8 +23,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 private extension SceneDelegate {
     func makeWindow(withWindowScene scene: UIWindowScene) {
-        let builder = BookSearchBuilder()
-        let navigationController = BaseNavigationController(rootViewController: builder.build())
+        let rootComponent = RootComponent()
+        let searchBuilder = rootComponent.searchBuilder
+        let navigationController = BaseNavigationController(rootViewController: searchBuilder.build())
 
         window = UIWindow(windowScene: scene)
         window?.rootViewController = navigationController

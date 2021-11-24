@@ -49,6 +49,10 @@
 		DBCA93AA27455DB300F5A439 /* BookDetailsViewControllerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA93A927455DB300F5A439 /* BookDetailsViewControllerSpy.swift */; };
 		DBCA93AC27455DCC00F5A439 /* BookDetailsInteractorTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA93AB27455DCC00F5A439 /* BookDetailsInteractorTestCase.swift */; };
 		DBCA93AE27455E0300F5A439 /* BookDetailsPresenterTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA93AD27455E0300F5A439 /* BookDetailsPresenterTestCase.swift */; };
+		DBD3200D274E3F8000FC6DCD /* NeedleFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = DBD3200C274E3F8000FC6DCD /* NeedleFoundation */; };
+		DBD32012274E40FE00FC6DCD /* NeedleGenerated.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD32011274E40FE00FC6DCD /* NeedleGenerated.swift */; };
+		DBD32014274E570400FC6DCD /* RootComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD32013274E570400FC6DCD /* RootComponent.swift */; };
+		DBD32016274E5E7C00FC6DCD /* ComponentizedBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD32015274E5E7C00FC6DCD /* ComponentizedBuilder.swift */; };
 		DBE5BBE12743D0F300724336 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE5BBE02743D0F300724336 /* AppDelegate.swift */; };
 		DBE5BBE32743D0F300724336 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE5BBE22743D0F300724336 /* SceneDelegate.swift */; };
 		DBE5BBE82743D0F300724336 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBE5BBE62743D0F300724336 /* Main.storyboard */; };
@@ -167,6 +171,9 @@
 		DBCA93A927455DB300F5A439 /* BookDetailsViewControllerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsViewControllerSpy.swift; sourceTree = "<group>"; };
 		DBCA93AB27455DCC00F5A439 /* BookDetailsInteractorTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsInteractorTestCase.swift; sourceTree = "<group>"; };
 		DBCA93AD27455E0300F5A439 /* BookDetailsPresenterTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsPresenterTestCase.swift; sourceTree = "<group>"; };
+		DBD32011274E40FE00FC6DCD /* NeedleGenerated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeedleGenerated.swift; sourceTree = "<group>"; };
+		DBD32013274E570400FC6DCD /* RootComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootComponent.swift; sourceTree = "<group>"; };
+		DBD32015274E5E7C00FC6DCD /* ComponentizedBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentizedBuilder.swift; sourceTree = "<group>"; };
 		DBE5BBDD2743D0F300724336 /* BookStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBE5BBE02743D0F300724336 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBE5BBE22743D0F300724336 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -221,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBE5BCB82743DB8B00724336 /* Moya in Frameworks */,
+				DBD3200D274E3F8000FC6DCD /* NeedleFoundation in Frameworks */,
 				DBE5BD6F27452FEF00724336 /* ImageDownloader.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,6 +282,7 @@
 			children = (
 				DBCA9372274551A600F5A439 /* Deatils */,
 				DBCA9371274551A000F5A439 /* Search */,
+				DBD32015274E5E7C00FC6DCD /* ComponentizedBuilder.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -361,6 +370,18 @@
 			path = Spies;
 			sourceTree = "<group>";
 		};
+		DBD3200F274E404D00FC6DCD /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				DBE5BC9C2743D5AB00724336 /* Data */,
+				DBE5BC9E2743D5C500724336 /* Domain */,
+				DBE5BC9F2743D5DE00724336 /* Presentation */,
+				DBE5BC3D2743D2D900724336 /* Root */,
+				DBD32011274E40FE00FC6DCD /* NeedleGenerated.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
 		DBE5BBD42743D0F300724336 = {
 			isa = PBXGroup;
 			children = (
@@ -386,10 +407,7 @@
 			isa = PBXGroup;
 			children = (
 				DBE5BC3E2743D32B00724336 /* Resources */,
-				DBE5BC9C2743D5AB00724336 /* Data */,
-				DBE5BC9E2743D5C500724336 /* Domain */,
-				DBE5BC9F2743D5DE00724336 /* Presentation */,
-				DBE5BC3D2743D2D900724336 /* Root */,
+				DBD3200F274E404D00FC6DCD /* Sources */,
 			);
 			path = BookStore;
 			sourceTree = "<group>";
@@ -421,6 +439,7 @@
 		DBE5BC3D2743D2D900724336 /* Root */ = {
 			isa = PBXGroup;
 			children = (
+				DBD32013274E570400FC6DCD /* RootComponent.swift */,
 				DBE5BBE02743D0F300724336 /* AppDelegate.swift */,
 				DBE5BBE22743D0F300724336 /* SceneDelegate.swift */,
 			);
@@ -655,6 +674,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DBE5BC072743D0F400724336 /* Build configuration list for PBXNativeTarget "BookStore" */;
 			buildPhases = (
+				DBD32010274E40B200FC6DCD /* Needle */,
 				DBE5BBD92743D0F300724336 /* Sources */,
 				DBE5BBDA2743D0F300724336 /* Frameworks */,
 				DBE5BBDB2743D0F300724336 /* Resources */,
@@ -667,6 +687,7 @@
 			name = BookStore;
 			packageProductDependencies = (
 				DBE5BCB72743DB8B00724336 /* Moya */,
+				DBD3200C274E3F8000FC6DCD /* NeedleFoundation */,
 			);
 			productName = BookStore;
 			productReference = DBE5BBDD2743D0F300724336 /* BookStore.app */;
@@ -741,6 +762,7 @@
 			mainGroup = DBE5BBD42743D0F300724336;
 			packageReferences = (
 				DBE5BCB62743DB8B00724336 /* XCRemoteSwiftPackageReference "Moya" */,
+				DBD3200B274E3F8000FC6DCD /* XCRemoteSwiftPackageReference "needle" */,
 			);
 			productRefGroup = DBE5BBDE2743D0F300724336 /* Products */;
 			projectDirPath = "";
@@ -780,6 +802,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		DBD32010274E40B200FC6DCD /* Needle */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Needle;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export SOURCEKIT_LOGGING=0 && needle generate BookStore/Sources/NeedleGenerated.swift ${SOURCE_ROOT}/\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DBE5BBD92743D0F300724336 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -806,7 +849,9 @@
 				DBCA9383274554CE00F5A439 /* BookDetailsModel.swift in Sources */,
 				DBCA93742745520F00F5A439 /* SearchBuilder.swift in Sources */,
 				DBCA93682745482600F5A439 /* BookDetailsSectionTitleHeaderView.swift in Sources */,
+				DBD32014274E570400FC6DCD /* RootComponent.swift in Sources */,
 				DBE5BCB32743D90000724336 /* BookStoreInformation.swift in Sources */,
+				DBD32016274E5E7C00FC6DCD /* ComponentizedBuilder.swift in Sources */,
 				DBE5BCFB274526B300724336 /* BaseTableViewHeaderFooterView.swift in Sources */,
 				DBCA93662745479300F5A439 /* BookDetailsHeaderView.swift in Sources */,
 				DBCA937E2745542D00F5A439 /* ErrorAlertable.swift in Sources */,
@@ -825,6 +870,7 @@
 				DBCA93882745550300F5A439 /* DetailsViewModelSection.swift in Sources */,
 				DBCA93642745477400F5A439 /* BookDetailsCell.swift in Sources */,
 				DBCA93542745429500F5A439 /* DisplayErrorMessage.swift in Sources */,
+				DBD32012274E40FE00FC6DCD /* NeedleGenerated.swift in Sources */,
 				DBE5BCC12743DEBF00724336 /* DetailsAPI.swift in Sources */,
 				DBE5BCCE2743FE0B00724336 /* BookSearchResult.swift in Sources */,
 				DBE5BCFF2745282D00724336 /* BaseLabel.swift in Sources */,
@@ -1195,6 +1241,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		DBD3200B274E3F8000FC6DCD /* XCRemoteSwiftPackageReference "needle" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/uber/needle.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		DBE5BCB62743DB8B00724336 /* XCRemoteSwiftPackageReference "Moya" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Moya/Moya";
@@ -1206,6 +1260,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		DBD3200C274E3F8000FC6DCD /* NeedleFoundation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DBD3200B274E3F8000FC6DCD /* XCRemoteSwiftPackageReference "needle" */;
+			productName = NeedleFoundation;
+		};
 		DBE5BCB72743DB8B00724336 /* Moya */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = DBE5BCB62743DB8B00724336 /* XCRemoteSwiftPackageReference "Moya" */;

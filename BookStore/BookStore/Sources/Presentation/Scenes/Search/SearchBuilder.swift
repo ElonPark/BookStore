@@ -8,33 +8,39 @@
 import Foundation
 import UIKit
 
-final class SearchComponent {
+import NeedleFoundation
+
+protocol SearchDependency: Dependency {}
+
+final class SearchComponent: Component<SearchDependency> {
+
+    var isbn13Validator: ISBN13validating {
+        return ISBN13Validator()
+    }
 
     fileprivate var initialState: SearchModel.Search.State {
         return SearchModel.Search.State()
     }
-
+    
     fileprivate var bookSearchRepository: BookSearchRepository {
         return BookSearchRepositoryImpl(networkProvider: NetworkProvider())
     }
 
-    fileprivate var isbn13Validator: ISBN13validating {
-        return ISBN13Validator()
+    fileprivate var bookDetailsBuilder: BookDetailsBuildable {
+        return BookDetailsBuilder { isbn13 in
+            BookDetailsComponent(parent: self, withISBN13: isbn13)
+        }
     }
 }
 
-protocol BookSearchBuildable {
+protocol SearchBuildable {
     func build() -> UIViewController
 }
 
-final class BookSearchBuilder: BookSearchBuildable {
+final class SearchBuilder: ComponentizedBuilder<SearchComponent, UIViewController, Void>,  SearchBuildable {
 
-    func build() -> UIViewController {
-        let component = SearchComponent()
-
-        let bookDetailsBuilder = BookDetailsBuilder()
-
-        let router = SearchRouter(bookDetailsBuilder: bookDetailsBuilder)
+    override func build(with component: SearchComponent) -> UIViewController {
+        let router = SearchRouter(bookDetailsBuilder: component.bookDetailsBuilder)
         let interactor = SearchInteractor(
             initialState: component.initialState,
             bookSearchRepository: component.bookSearchRepository,
@@ -50,5 +56,9 @@ final class BookSearchBuilder: BookSearchBuildable {
         presenter.viewController = viewController
 
         return viewController
+    }
+
+    func build() -> UIViewController {
+        return build(withDynamicComponentDependency: Void())
     }
 }
