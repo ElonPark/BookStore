@@ -20,6 +20,15 @@
         }
       },
       {
+        "package": "NeedleFoundation",
+        "repositoryURL": "https://github.com/uber/needle.git",
+        "state": {
+          "branch": "master",
+          "revision": "847fd0f38e76a041d4d9ca1c931db334021e3525",
+          "version": null
+        }
+      },
+      {
         "package": "ReactiveSwift",
         "repositoryURL": "https://github.com/ReactiveCocoa/ReactiveSwift.git",
         "state": {

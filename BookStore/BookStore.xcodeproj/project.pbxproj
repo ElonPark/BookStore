@@ -49,6 +49,7 @@
 		DBCA93AA27455DB300F5A439 /* BookDetailsViewControllerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA93A927455DB300F5A439 /* BookDetailsViewControllerSpy.swift */; };
 		DBCA93AC27455DCC00F5A439 /* BookDetailsInteractorTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA93AB27455DCC00F5A439 /* BookDetailsInteractorTestCase.swift */; };
 		DBCA93AE27455E0300F5A439 /* BookDetailsPresenterTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA93AD27455E0300F5A439 /* BookDetailsPresenterTestCase.swift */; };
+		DBD3200D274E3F8000FC6DCD /* NeedleFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = DBD3200C274E3F8000FC6DCD /* NeedleFoundation */; };
 		DBE5BBE12743D0F300724336 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE5BBE02743D0F300724336 /* AppDelegate.swift */; };
 		DBE5BBE32743D0F300724336 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE5BBE22743D0F300724336 /* SceneDelegate.swift */; };
 		DBE5BBE82743D0F300724336 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBE5BBE62743D0F300724336 /* Main.storyboard */; };
@@ -221,6 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBE5BCB82743DB8B00724336 /* Moya in Frameworks */,
+				DBD3200D274E3F8000FC6DCD /* NeedleFoundation in Frameworks */,
 				DBE5BD6F27452FEF00724336 /* ImageDownloader.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -667,6 +669,7 @@
 			name = BookStore;
 			packageProductDependencies = (
 				DBE5BCB72743DB8B00724336 /* Moya */,
+				DBD3200C274E3F8000FC6DCD /* NeedleFoundation */,
 			);
 			productName = BookStore;
 			productReference = DBE5BBDD2743D0F300724336 /* BookStore.app */;
@@ -741,6 +744,7 @@
 			mainGroup = DBE5BBD42743D0F300724336;
 			packageReferences = (
 				DBE5BCB62743DB8B00724336 /* XCRemoteSwiftPackageReference "Moya" */,
+				DBD3200B274E3F8000FC6DCD /* XCRemoteSwiftPackageReference "needle" */,
 			);
 			productRefGroup = DBE5BBDE2743D0F300724336 /* Products */;
 			projectDirPath = "";
@@ -1195,6 +1199,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		DBD3200B274E3F8000FC6DCD /* XCRemoteSwiftPackageReference "needle" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/uber/needle.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		DBE5BCB62743DB8B00724336 /* XCRemoteSwiftPackageReference "Moya" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Moya/Moya";
@@ -1206,6 +1218,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		DBD3200C274E3F8000FC6DCD /* NeedleFoundation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DBD3200B274E3F8000FC6DCD /* XCRemoteSwiftPackageReference "needle" */;
+			productName = NeedleFoundation;
+		};
 		DBE5BCB72743DB8B00724336 /* Moya */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = DBE5BCB62743DB8B00724336 /* XCRemoteSwiftPackageReference "Moya" */;
