@@ -12,139 +12,139 @@ import Moya
 
 class BookDetailsRepositoryTestCase: XCTestCase {
 
-  var bookDetailsRepository: BookDetailsRepository!
+    var bookDetailsRepository: BookDetailsRepository!
 
-  override func setUpWithError() throws {
-    bookDetailsRepository = BookDetailsRepositoryImpl(networkProvider: NetworkProvider())
-  }
-
-  func testBookDetailsSuccessResponse() throws {
-    // Given
-    let isbn = "9781617294136"
-
-    // when
-    var bookDetails: BookDetails?
-    var bookDetailsError: Error?
-    let expectation = XCTestExpectation()
-
-    bookDetailsRepository.bookDetails(isbn13: isbn) { response in
-      switch response {
-      case let .success(result):
-        bookDetails = result
-
-      case let .failure(error):
-        bookDetailsError = error
-      }
-
-      expectation.fulfill()
+    override func setUpWithError() throws {
+        bookDetailsRepository = BookDetailsRepositoryImpl(networkProvider: NetworkProvider())
     }
 
-    wait(for: [expectation], timeout: 10.0)
+    func testBookDetailsSuccessResponse() throws {
+        // Given
+        let isbn = "9781617294136"
 
-    // Then
-    XCTAssertNotNil(bookDetails)
-    XCTAssertNil(bookDetailsError)
-  }
+        // when
+        var bookDetails: BookDetails?
+        var bookDetailsError: Error?
+        let expectation = XCTestExpectation()
 
-  /// Test when invalid ISBN
-  func testBookDetailsErrorResponse() throws {
-    // Given
-    let testISBN = "0000000000000"
+        bookDetailsRepository.bookDetails(isbn13: isbn) { response in
+            switch response {
+            case let .success(result):
+                bookDetails = result
 
-    // when
-    var bookDetails: BookDetails?
-    var bookDetailsError: Error?
-    let expectation = XCTestExpectation()
+            case let .failure(error):
+                bookDetailsError = error
+            }
 
-    let testDataFactory = BookDetailsTestDataFactory()
-    let expectResult = testDataFactory.makeErrorResponseTestData()
+            expectation.fulfill()
+        }
 
-    bookDetailsRepository.bookDetails(isbn13: testISBN) { response in
-      switch response {
-      case let .success(result):
-        bookDetails = result
+        wait(for: [expectation], timeout: 10.0)
 
-      case let .failure(error):
-        bookDetailsError = error
-      }
-
-      expectation.fulfill()
+        // Then
+        XCTAssertNotNil(bookDetails)
+        XCTAssertNil(bookDetailsError)
     }
 
-    wait(for: [expectation], timeout: 10.0)
+    /// Test when invalid ISBN
+    func testBookDetailsErrorResponse() throws {
+        // Given
+        let testISBN = "0000000000000"
 
-    // Then
-    let result = try XCTUnwrap(bookDetails)
-    XCTAssertEqual(result, expectResult)
-    XCTAssertNil(bookDetailsError)
-  }
+        // when
+        var bookDetails: BookDetails?
+        var bookDetailsError: Error?
+        let expectation = XCTestExpectation()
 
-  /// Test when invalid format ISBN
-  func testBookDetailsErrorResponseWhenInvalidFormatISBN() throws {
-    // Given
-    let testISBN = "9781734314509"
+        let testDataFactory = BookDetailsTestDataFactory()
+        let expectResult = testDataFactory.makeErrorResponseTestData()
 
-    // when
-    var bookDetails: BookDetails?
-    var bookDetailsError: Error?
-    let expectation = XCTestExpectation()
+        bookDetailsRepository.bookDetails(isbn13: testISBN) { response in
+            switch response {
+            case let .success(result):
+                bookDetails = result
 
-    let testDataFactory = BookDetailsTestDataFactory()
-    let expectResult = testDataFactory.makeErrorResponseTestData()
+            case let .failure(error):
+                bookDetailsError = error
+            }
 
-    bookDetailsRepository.bookDetails(isbn13: testISBN) { response in
-      switch response {
-      case let .success(result):
-        bookDetails = result
+            expectation.fulfill()
+        }
 
-      case let .failure(error):
-        bookDetailsError = error
-      }
+        wait(for: [expectation], timeout: 10.0)
 
-      expectation.fulfill()
+        // Then
+        let result = try XCTUnwrap(bookDetails)
+        XCTAssertEqual(result, expectResult)
+        XCTAssertNil(bookDetailsError)
     }
 
-    wait(for: [expectation], timeout: 10.0)
+    /// Test when invalid format ISBN
+    func testBookDetailsErrorResponseWhenInvalidFormatISBN() throws {
+        // Given
+        let testISBN = "9781734314509"
 
-    // Then
-    let result = try XCTUnwrap(bookDetails)
-    XCTAssertEqual(result, expectResult)
-    XCTAssertNil(bookDetailsError)
-  }
+        // when
+        var bookDetails: BookDetails?
+        var bookDetailsError: Error?
+        let expectation = XCTestExpectation()
 
-  /// Test when invalid format ISBN
-  func testBookDetailsFailure() throws {
-    // Given
-    let invalidISBN = "1234"
+        let testDataFactory = BookDetailsTestDataFactory()
+        let expectResult = testDataFactory.makeErrorResponseTestData()
 
-    // when
-    var bookDetails: BookDetails?
-    var bookDetailsError: Error?
-    let expectation = XCTestExpectation()
+        bookDetailsRepository.bookDetails(isbn13: testISBN) { response in
+            switch response {
+            case let .success(result):
+                bookDetails = result
 
-    bookDetailsRepository.bookDetails(isbn13: invalidISBN) { response in
-      switch response {
-      case let .success(result):
-        bookDetails = result
+            case let .failure(error):
+                bookDetailsError = error
+            }
 
-      case let .failure(error):
-        bookDetailsError = error
-      }
+            expectation.fulfill()
+        }
 
-      expectation.fulfill()
+        wait(for: [expectation], timeout: 10.0)
+
+        // Then
+        let result = try XCTUnwrap(bookDetails)
+        XCTAssertEqual(result, expectResult)
+        XCTAssertNil(bookDetailsError)
     }
 
-    wait(for: [expectation], timeout: 10.0)
+    /// Test when invalid format ISBN
+    func testBookDetailsFailure() throws {
+        // Given
+        let invalidISBN = "1234"
+        
+        // when
+        var bookDetails: BookDetails?
+        var bookDetailsError: Error?
+        let expectation = XCTestExpectation()
 
-    // Then
-    XCTAssertNil(bookDetails)
-    XCTAssertNotNil(bookDetailsError)
+        bookDetailsRepository.bookDetails(isbn13: invalidISBN) { response in
+            switch response {
+            case let .success(result):
+                bookDetails = result
 
-    var moyaError: MoyaError? {
-        guard case let .undefinedError(error) = (bookDetailsError as? RepositoryError) else { return  nil }
-        return error as? MoyaError
+            case let .failure(error):
+                bookDetailsError = error
+            }
+
+            expectation.fulfill()
+        }
+
+        wait(for: [expectation], timeout: 10.0)
+
+        // Then
+        XCTAssertNil(bookDetails)
+        XCTAssertNotNil(bookDetailsError)
+
+        var moyaError: MoyaError? {
+            guard case let .undefinedError(error) = (bookDetailsError as? RepositoryError) else { return  nil }
+            return error as? MoyaError
+        }
+        let statusCode = try XCTUnwrap(moyaError?.response?.statusCode)
+        XCTAssertEqual(statusCode, 404)
     }
-    let statusCode = try XCTUnwrap(moyaError?.response?.statusCode)
-    XCTAssertEqual(statusCode, 404)
-  }
 }
