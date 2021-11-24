@@ -363,6 +363,17 @@
 			path = Spies;
 			sourceTree = "<group>";
 		};
+		DBD3200F274E404D00FC6DCD /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				DBE5BC9C2743D5AB00724336 /* Data */,
+				DBE5BC9E2743D5C500724336 /* Domain */,
+				DBE5BC9F2743D5DE00724336 /* Presentation */,
+				DBE5BC3D2743D2D900724336 /* Root */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
 		DBE5BBD42743D0F300724336 = {
 			isa = PBXGroup;
 			children = (
@@ -388,10 +399,7 @@
 			isa = PBXGroup;
 			children = (
 				DBE5BC3E2743D32B00724336 /* Resources */,
-				DBE5BC9C2743D5AB00724336 /* Data */,
-				DBE5BC9E2743D5C500724336 /* Domain */,
-				DBE5BC9F2743D5DE00724336 /* Presentation */,
-				DBE5BC3D2743D2D900724336 /* Root */,
+				DBD3200F274E404D00FC6DCD /* Sources */,
 			);
 			path = BookStore;
 			sourceTree = "<group>";
