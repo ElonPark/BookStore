@@ -50,6 +50,7 @@
 		DBCA93AC27455DCC00F5A439 /* BookDetailsInteractorTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA93AB27455DCC00F5A439 /* BookDetailsInteractorTestCase.swift */; };
 		DBCA93AE27455E0300F5A439 /* BookDetailsPresenterTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA93AD27455E0300F5A439 /* BookDetailsPresenterTestCase.swift */; };
 		DBD3200D274E3F8000FC6DCD /* NeedleFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = DBD3200C274E3F8000FC6DCD /* NeedleFoundation */; };
+		DBD32012274E40FE00FC6DCD /* NeedleGenerated.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD32011274E40FE00FC6DCD /* NeedleGenerated.swift */; };
 		DBE5BBE12743D0F300724336 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE5BBE02743D0F300724336 /* AppDelegate.swift */; };
 		DBE5BBE32743D0F300724336 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE5BBE22743D0F300724336 /* SceneDelegate.swift */; };
 		DBE5BBE82743D0F300724336 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBE5BBE62743D0F300724336 /* Main.storyboard */; };
@@ -168,6 +169,7 @@
 		DBCA93A927455DB300F5A439 /* BookDetailsViewControllerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsViewControllerSpy.swift; sourceTree = "<group>"; };
 		DBCA93AB27455DCC00F5A439 /* BookDetailsInteractorTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsInteractorTestCase.swift; sourceTree = "<group>"; };
 		DBCA93AD27455E0300F5A439 /* BookDetailsPresenterTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsPresenterTestCase.swift; sourceTree = "<group>"; };
+		DBD32011274E40FE00FC6DCD /* NeedleGenerated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeedleGenerated.swift; sourceTree = "<group>"; };
 		DBE5BBDD2743D0F300724336 /* BookStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBE5BBE02743D0F300724336 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBE5BBE22743D0F300724336 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -370,6 +372,7 @@
 				DBE5BC9E2743D5C500724336 /* Domain */,
 				DBE5BC9F2743D5DE00724336 /* Presentation */,
 				DBE5BC3D2743D2D900724336 /* Root */,
+				DBD32011274E40FE00FC6DCD /* NeedleGenerated.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -665,6 +668,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DBE5BC072743D0F400724336 /* Build configuration list for PBXNativeTarget "BookStore" */;
 			buildPhases = (
+				DBD32010274E40B200FC6DCD /* Needle */,
 				DBE5BBD92743D0F300724336 /* Sources */,
 				DBE5BBDA2743D0F300724336 /* Frameworks */,
 				DBE5BBDB2743D0F300724336 /* Resources */,
@@ -792,6 +796,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		DBD32010274E40B200FC6DCD /* Needle */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Needle;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export SOURCEKIT_LOGGING=0 && needle generate BookStore/Sources/NeedleGenerated.swift ${SOURCE_ROOT}/\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DBE5BBD92743D0F300724336 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -837,6 +862,7 @@
 				DBCA93882745550300F5A439 /* DetailsViewModelSection.swift in Sources */,
 				DBCA93642745477400F5A439 /* BookDetailsCell.swift in Sources */,
 				DBCA93542745429500F5A439 /* DisplayErrorMessage.swift in Sources */,
+				DBD32012274E40FE00FC6DCD /* NeedleGenerated.swift in Sources */,
 				DBE5BCC12743DEBF00724336 /* DetailsAPI.swift in Sources */,
 				DBE5BCCE2743FE0B00724336 /* BookSearchResult.swift in Sources */,
 				DBE5BCFF2745282D00724336 /* BaseLabel.swift in Sources */,
