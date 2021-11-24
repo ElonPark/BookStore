@@ -39,7 +39,7 @@ class BookDetailsRepositoryTestCase: XCTestCase {
       expectation.fulfill()
     }
 
-    wait(for: [expectation], timeout: 4.0)
+    wait(for: [expectation], timeout: 10.0)
 
     // Then
     XCTAssertNotNil(bookDetails)
@@ -71,7 +71,7 @@ class BookDetailsRepositoryTestCase: XCTestCase {
       expectation.fulfill()
     }
 
-    wait(for: [expectation], timeout: 4.0)
+    wait(for: [expectation], timeout: 10.0)
 
     // Then
     let result = try XCTUnwrap(bookDetails)
@@ -104,7 +104,7 @@ class BookDetailsRepositoryTestCase: XCTestCase {
       expectation.fulfill()
     }
 
-    wait(for: [expectation], timeout: 4.0)
+    wait(for: [expectation], timeout: 10.0)
 
     // Then
     let result = try XCTUnwrap(bookDetails)
@@ -134,7 +134,7 @@ class BookDetailsRepositoryTestCase: XCTestCase {
       expectation.fulfill()
     }
 
-    wait(for: [expectation], timeout: 4.0)
+    wait(for: [expectation], timeout: 10.0)
 
     // Then
     XCTAssertNil(bookDetails)
