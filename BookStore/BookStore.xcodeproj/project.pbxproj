@@ -55,7 +55,6 @@
 		DBD32016274E5E7C00FC6DCD /* ComponentizedBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD32015274E5E7C00FC6DCD /* ComponentizedBuilder.swift */; };
 		DBE5BBE12743D0F300724336 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE5BBE02743D0F300724336 /* AppDelegate.swift */; };
 		DBE5BBE32743D0F300724336 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE5BBE22743D0F300724336 /* SceneDelegate.swift */; };
-		DBE5BBE82743D0F300724336 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBE5BBE62743D0F300724336 /* Main.storyboard */; };
 		DBE5BBEA2743D0F400724336 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBE5BBE92743D0F400724336 /* Assets.xcassets */; };
 		DBE5BBED2743D0F400724336 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBE5BBEB2743D0F400724336 /* LaunchScreen.storyboard */; };
 		DBE5BC032743D0F400724336 /* BookStoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE5BC022743D0F400724336 /* BookStoreUITests.swift */; };
@@ -177,7 +176,6 @@
 		DBE5BBDD2743D0F300724336 /* BookStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBE5BBE02743D0F300724336 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBE5BBE22743D0F300724336 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DBE5BBE72743D0F300724336 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DBE5BBE92743D0F400724336 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DBE5BBEC2743D0F400724336 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DBE5BBEE2743D0F400724336 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -449,7 +447,6 @@
 		DBE5BC3E2743D32B00724336 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				DBE5BBE62743D0F300724336 /* Main.storyboard */,
 				DBE5BBE92743D0F400724336 /* Assets.xcassets */,
 				DBE5BBEB2743D0F400724336 /* LaunchScreen.storyboard */,
 				DBE5BBEE2743D0F400724336 /* Info.plist */,
@@ -782,7 +779,6 @@
 			files = (
 				DBE5BBED2743D0F400724336 /* LaunchScreen.storyboard in Resources */,
 				DBE5BBEA2743D0F400724336 /* Assets.xcassets in Resources */,
-				DBE5BBE82743D0F300724336 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -942,14 +938,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		DBE5BBE62743D0F300724336 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DBE5BBE72743D0F300724336 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DBE5BBEB2743D0F400724336 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
