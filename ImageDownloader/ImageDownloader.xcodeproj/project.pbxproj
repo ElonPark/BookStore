@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB6C9C2527AAB3A4003DA727 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C9C2427AAB3A4003DA727 /* StringExtensions.swift */; };
 		DBCA934F2745406000F5A439 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DBCA934E2745406000F5A439 /* Alamofire */; };
 		DBE5BD5D27452FD700724336 /* ImageDownloader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE5BD5327452FD700724336 /* ImageDownloader.framework */; };
 		DBE5BD6427452FD700724336 /* ImageDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = DBE5BD5627452FD700724336 /* ImageDownloader.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DB6C9C2427AAB3A4003DA727 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		DBE5BD5327452FD700724336 /* ImageDownloader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ImageDownloader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBE5BD5627452FD700724336 /* ImageDownloader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageDownloader.h; sourceTree = "<group>"; };
 		DBE5BD5727452FD700724336 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -92,6 +94,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB6C9C2327AAB36C003DA727 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DB6C9C2427AAB3A4003DA727 /* StringExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		DBE5BD4927452FD700724336 = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +123,7 @@
 		DBE5BD5527452FD700724336 /* ImageDownloader */ = {
 			isa = PBXGroup;
 			children = (
+				DB6C9C2327AAB36C003DA727 /* Extensions */,
 				DBE5BD72274530F200724336 /* ImageCache */,
 				DBE5BDA527453F8900724336 /* ImageDownloadCancelable.swift */,
 				DBE5BD9227453E1A00724336 /* ImageDownloader.swift */,
@@ -319,6 +330,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB6C9C2527AAB3A4003DA727 /* StringExtensions.swift in Sources */,
 				DBE5BD7E274531C700724336 /* CacheKey.swift in Sources */,
 				DBE5BD842745395E00724336 /* MemoryCache.swift in Sources */,
 				DBE5BD7C274531AD00724336 /* DiskItemIndex.swift in Sources */,
