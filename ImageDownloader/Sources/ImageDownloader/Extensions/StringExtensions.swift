@@ -5,6 +5,7 @@
 //  Created by Elon on 2022/02/02.
 //
 
+import Foundation
 import CryptoKit
 
 extension String {

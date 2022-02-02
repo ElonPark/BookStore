@@ -10,6 +10,7 @@
 		DB48BF3F27480654006FCD47 /* RequestCancellable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB48BF3E27480654006FCD47 /* RequestCancellable.swift */; };
 		DB48BF4427480C37006FCD47 /* RepositoryError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB48BF4327480C37006FCD47 /* RepositoryError.swift */; };
 		DB48BF4627481380006FCD47 /* SearchInteractorDelayedStubTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB48BF4527481380006FCD47 /* SearchInteractorDelayedStubTestCase.swift */; };
+		DB6C9C2A27AB0F45003DA727 /* ImageDownloader in Frameworks */ = {isa = PBXBuildFile; productRef = DB6C9C2927AB0F45003DA727 /* ImageDownloader */; };
 		DBCA93522745427400F5A439 /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA93512745427400F5A439 /* SearchModel.swift */; };
 		DBCA93542745429500F5A439 /* DisplayErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA93532745429500F5A439 /* DisplayErrorMessage.swift */; };
 		DBCA9356274542B900F5A439 /* BooktTitleHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA9355274542B900F5A439 /* BooktTitleHeaderViewModel.swift */; };
@@ -92,8 +93,6 @@
 		DBE5BCFB274526B300724336 /* BaseTableViewHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE5BCFA274526B300724336 /* BaseTableViewHeaderFooterView.swift */; };
 		DBE5BCFD2745270500724336 /* BaseImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE5BCFC2745270500724336 /* BaseImageView.swift */; };
 		DBE5BCFF2745282D00724336 /* BaseLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE5BCFE2745282D00724336 /* BaseLabel.swift */; };
-		DBE5BD6F27452FEF00724336 /* ImageDownloader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE5BD6E27452FEF00724336 /* ImageDownloader.framework */; };
-		DBE5BD7027452FEF00724336 /* ImageDownloader.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DBE5BD6E27452FEF00724336 /* ImageDownloader.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,24 +112,11 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		DBE5BD7127452FEF00724336 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				DBE5BD7027452FEF00724336 /* ImageDownloader.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		DB48BF3E27480654006FCD47 /* RequestCancellable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestCancellable.swift; sourceTree = "<group>"; };
 		DB48BF4327480C37006FCD47 /* RepositoryError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryError.swift; sourceTree = "<group>"; };
 		DB48BF4527481380006FCD47 /* SearchInteractorDelayedStubTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractorDelayedStubTestCase.swift; sourceTree = "<group>"; };
+		DB6C9C2827AB0F37003DA727 /* ImageDownloader */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = ImageDownloader; path = ../ImageDownloader; sourceTree = "<group>"; };
 		DBCA93512745427400F5A439 /* SearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
 		DBCA93532745429500F5A439 /* DisplayErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayErrorMessage.swift; sourceTree = "<group>"; };
 		DBCA9355274542B900F5A439 /* BooktTitleHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooktTitleHeaderViewModel.swift; sourceTree = "<group>"; };
@@ -226,8 +212,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBE5BCB82743DB8B00724336 /* Moya in Frameworks */,
+				DB6C9C2A27AB0F45003DA727 /* ImageDownloader in Frameworks */,
 				DBD3200D274E3F8000FC6DCD /* NeedleFoundation in Frameworks */,
-				DBE5BD6F27452FEF00724336 /* ImageDownloader.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,6 +369,7 @@
 		DBE5BBD42743D0F300724336 = {
 			isa = PBXGroup;
 			children = (
+				DB6C9C2827AB0F37003DA727 /* ImageDownloader */,
 				DBE5BBDF2743D0F300724336 /* BookStore */,
 				DBE5BBF62743D0F400724336 /* BookStoreTests */,
 				DBE5BC012743D0F400724336 /* BookStoreUITests */,
@@ -675,7 +662,6 @@
 				DBE5BBD92743D0F300724336 /* Sources */,
 				DBE5BBDA2743D0F300724336 /* Frameworks */,
 				DBE5BBDB2743D0F300724336 /* Resources */,
-				DBE5BD7127452FEF00724336 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -685,6 +671,7 @@
 			packageProductDependencies = (
 				DBE5BCB72743DB8B00724336 /* Moya */,
 				DBD3200C274E3F8000FC6DCD /* NeedleFoundation */,
+				DB6C9C2927AB0F45003DA727 /* ImageDownloader */,
 			);
 			productName = BookStore;
 			productReference = DBE5BBDD2743D0F300724336 /* BookStore.app */;
@@ -1248,6 +1235,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		DB6C9C2927AB0F45003DA727 /* ImageDownloader */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ImageDownloader;
+		};
 		DBD3200C274E3F8000FC6DCD /* NeedleFoundation */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = DBD3200B274E3F8000FC6DCD /* XCRemoteSwiftPackageReference "needle" */;
