@@ -14,7 +14,7 @@ final class CacheKey: NSObject {
     
     init(url: URL) {
         self.url = url
-        key = String(url.absoluteString.hashValue)
+        key = String(url.absoluteString.sha1)
     }
     
     init?(coder: NSCoder) {
